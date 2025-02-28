@@ -92,8 +92,6 @@ def generate_article(topic):
       tags: [generate 5-7 relevant tags]
       categories: [choose 1-2 relevant categories]
       summary: "A detailed guide on {topic}."
-      cover:
-        image: "img/covers/{slugify(topic)}.jpg"
         alt: "{topic}"
       ---
       ```

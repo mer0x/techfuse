@@ -43,6 +43,7 @@ jobs:
         git config --global user.name "GitHub Actions"
         git add content/posts/
         git commit -m "Auto-publish new blog post via GitHub Actions" || echo "No changes to commit"
+        git pull --rebase origin main  # Trage modificările noi din repo
         git push origin main
 
   deploy:

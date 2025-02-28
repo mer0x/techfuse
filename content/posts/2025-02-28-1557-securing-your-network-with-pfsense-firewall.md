@@ -5,11 +5,7 @@ categories: ["IT Tutorials"]
 draft: false
 ---
 
-```markdown
----
-title: "Securing Your Network with pfSense Firewall"
-tags: ["pfSense", "Network Security", "Firewall", "Open Source", "Network Management"]
----
+
 
 # Securing Your Network with pfSense Firewall
 

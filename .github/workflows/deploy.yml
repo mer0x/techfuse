@@ -28,20 +28,20 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install openai gitpython
+        pip install openai gitpython python-slugify
 
     - name: Run script to generate article
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: python scripts/generate_post_blog.py
 
-    - name: Commit and Push new post
+    - name: Commit and Push new post and tag files
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
-        git add content/posts/
+        git add content/posts/ data/
         git commit -m "Auto-publish new blog post via GitHub Actions" || echo "No changes to commit"
         git pull --rebase origin main  # Trage modificările noi din repo
         git push origin main
@@ -62,6 +62,10 @@ jobs:
       with:
         hugo-version: 'latest'
         extended: true
+
+    - name: Create img directories if needed
+      run: |
+        mkdir -p static/img/covers
 
     - name: Build site
       run: hugo --minify

@@ -1,6 +1,5 @@
 ---
 title: "Securing your network with pfSense firewall"
-date: 2025-02-28-1557
 tags: ["Self-Hosting", "DevOps", "Homelab", "Networking"]
 categories: ["IT Tutorials"]
 draft: false

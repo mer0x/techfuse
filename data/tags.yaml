@@ -1,0 +1,21 @@
+
+- name: "Docker"
+  description: "Articles related to Docker"
+
+- name: "Docker Compose"
+  description: "Articles related to Docker Compose"
+
+- name: "Containerization"
+  description: "Articles related to Containerization"
+
+- name: "DevOps"
+  description: "Articles related to DevOps"
+
+- name: "Self-Hosting"
+  description: "Articles related to Self-Hosting"
+
+- name: "Microservices"
+  description: "Articles related to Microservices"
+
+- name: "Continuous Deployment"
+  description: "Articles related to Continuous Deployment"

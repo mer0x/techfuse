@@ -1,7 +1,6 @@
 ---
 title: "How to setup a private cloud with Nextcloud"
 date: 2025-02-28
-draft: false
 toc: true
 tags: ["Setup", "Private", "Cloud", "Nextcloud"]
 categories: ["Infrastructure", "Automation"]

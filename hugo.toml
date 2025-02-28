@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://mer0x.github.io/techfuse/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "PaperMod"

@@ -2,6 +2,7 @@ import openai
 import datetime
 import os
 import random
+import json
 
 # Configurare OpenAI
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -10,40 +11,54 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 REPO_PATH = os.path.dirname(os.path.abspath(__file__)) + "/../"
 POSTS_DIR = os.path.join(REPO_PATH, "content/posts")
 
-# Listă de subiecte IT Self-Hosted
-TOPICS = [
-    "How to set up a self-hosted VPN with WireGuard",
-    "Proxmox vs ESXi: Best Hypervisor for Homelab",
-    "How to deploy Kubernetes on bare-metal servers",
-    "Setting up Pi-hole for network-wide ad blocking",
-    "How to monitor your servers using Prometheus and Grafana",
-    "Automating server deployment with Ansible and Terraform",
-    "Hosting your own cloud storage with Nextcloud",
-    "Securing your network with pfSense firewall",
-    "How to configure Cloudflare for self-hosted applications",
-    "Using GitHub Actions for CI/CD in self-hosted environments",
-    "Building a home server with Unraid vs TrueNAS",
-    "Deploying AI models locally with Ollama & RunPod",
-    "Self-hosting AI chatbots with GPT4All",
-    "How to run a Matrix or XMPP chat server",
-    "Automating backups with BorgBackup and Restic",
-    "Setting up Jellyfin or Plex for media streaming",
-    "How to host your own email server with Mailcow",
+# Cuvinte-cheie pentru self-hosting și IT
+KEYWORDS = [
+    "self-hosted", "homelab", "proxmox", "docker", "kubernetes", "cloudflare",
+    "ansible", "grafana", "prometheus", "wireguard", "nextcloud", "pihole",
+    "vaultwarden", "jellyfin", "plex", "email server", "git self-hosting",
+    "CI/CD self-hosted", "matrix server", "xmpp server", "borg backup",
+    "traefik", "cloud storage self-hosted", "home automation"
 ]
 
-# Alegem un subiect random
-selected_topic = random.choice(TOPICS)
+# Verifică articolele existente pentru a evita duplicate
+def get_existing_topics():
+    existing_titles = set()
+    if not os.path.exists(POSTS_DIR):
+        return existing_titles
+    
+    for filename in os.listdir(POSTS_DIR):
+        if filename.endswith(".md"):
+            with open(os.path.join(POSTS_DIR, filename), "r", encoding="utf-8") as f:
+                first_line = f.readline().strip()
+                if first_line.startswith("title:"):
+                    existing_titles.add(first_line.replace("title:", "").strip().replace('"', ''))
+    
+    return existing_titles
 
-# Generare articol folosind GPT-4o
-def generate_article():
+# Alege un subiect nou și unic pe baza cuvintelor-cheie
+def choose_unique_topic():
+    existing_titles = get_existing_topics()
+
+    while True:
+        random_keyword = random.choice(KEYWORDS)
+        topic = f"How to self-host {random_keyword} securely"
+        
+        if topic not in existing_titles:
+            return topic
+
+# Generare articol folosind GPT-4o cu research pe cuvântul-cheie ales
+def generate_article(topic):
     prompt = f"""
-    Write a **detailed, technical tutorial** for the topic: "{selected_topic}".
-    The tutorial must:
-    - Be **at least 800 words long**.
-    - Contain **real-world tested code examples**.
-    - Have a **structured format**: Introduction, Prerequisites, Implementation, Troubleshooting, Conclusion.
-    - Be in **Markdown format** for Hugo.
-    - Include a **title and relevant tags**.
+    You are a highly skilled DevOps engineer and homelab expert. 
+    Your task is to write a **detailed, technical tutorial** for the topic: "{topic}".
+
+    - The tutorial must be **at least 1000 words long**.
+    - Include **real-world tested code examples** (Linux CLI, Docker, Ansible, Proxmox, etc.).
+    - Structure: **Introduction, Prerequisites, Step-by-Step Implementation, Troubleshooting, Conclusion**.
+    - Use **Markdown format** for Hugo.
+    - Include relevant **tags**.
+
+    First, do a brief research on why self-hosting {topic} is important and the best tools available for it. Then, generate the tutorial.
     """
 
     client = openai.OpenAI(api_key=OPENAI_API_KEY)
@@ -51,26 +66,25 @@ def generate_article():
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=4000,
+        max_tokens=4096,
     )
 
     return response.choices[0].message.content
 
-# Salvăm articolul generat în Hugo
-def save_article(content):
-    date_str = datetime.datetime.now().strftime("%Y-%m-%d-%H%M")
-    slug = selected_topic.lower().replace(" ", "-").replace("/", "").replace(":", "")
+# Salvăm articolul generat în Hugo cu un format de date corect (ISO 8601)
+def save_article(topic, content):
+    date_str = datetime.datetime.now().isoformat()
+    slug = topic.lower().replace(" ", "-").replace("/", "").replace(":", "")
 
-    post_path = os.path.join(POSTS_DIR, f"{date_str}-{slug}.md")
+    post_path = os.path.join(POSTS_DIR, f"{slug}.md")
 
     frontmatter = f"""---
-title: "{selected_topic}"
-date: {date_str}
+title: "{topic}"
+date: "{date_str}"
 tags: ["Self-Hosting", "DevOps", "Homelab", "Networking"]
 categories: ["IT Tutorials"]
 draft: false
 ---
-
 """
 
     with open(post_path, "w", encoding="utf-8") as f:
@@ -79,6 +93,7 @@ draft: false
     return post_path
 
 if __name__ == "__main__":
-    article_content = generate_article()
-    post_file = save_article(article_content)
+    selected_topic = choose_unique_topic()
+    article_content = generate_article(selected_topic)
+    post_file = save_article(selected_topic, article_content)
     print(f"✅ New post published: {post_file}")

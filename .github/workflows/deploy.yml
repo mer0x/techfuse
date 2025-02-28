@@ -2,7 +2,7 @@ name: Auto Generate & Deploy Blog Post
 
 on:
   schedule:
-    - cron: "0 8 * * *"  # Rulează zilnic la ora 08:00 UTC
+    - cron: "0 * * * *"  # Rulează zilnic la ora 08:00 UTC
   workflow_dispatch:  # Permite și rulare manuală din GitHub Actions
   push:
     branches:

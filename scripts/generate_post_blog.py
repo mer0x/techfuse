@@ -73,7 +73,7 @@ def generate_article(topic):
 
 # Salvăm articolul generat în Hugo cu un format de date corect (ISO 8601)
 def save_article(topic, content):
-    date_str = datetime.datetime.now().isoformat()
+ date_str = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
     slug = topic.lower().replace(" ", "-").replace("/", "").replace(":", "")
 
     post_path = os.path.join(POSTS_DIR, f"{slug}.md")

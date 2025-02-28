@@ -31,3 +31,12 @@
 
 - name: "Bash Scripting"
   description: "Articles related to Bash Scripting"
+
+- name: "Homelab"
+  description: "Articles related to Homelab"
+
+- name: "Automation"
+  description: "Articles related to Automation"
+
+- name: "Infrastructure as Code"
+  description: "Articles related to Infrastructure as Code"

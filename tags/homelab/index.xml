@@ -13,7 +13,166 @@ keywords: [&amp;ldquo;Proxmox&amp;rdquo;, &amp;ldquo;ESXi&amp;rdquo;, &amp;ldquo
 categories: [&amp;ldquo;DevOps&amp;rdquo;, &amp;ldquo;Virtualization&amp;rdquo;]
 tags: [&amp;ldquo;Proxmox&amp;rdquo;, &amp;ldquo;ESXi&amp;rdquo;]&lt;/h2>
 &lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>Choosing the right virtualization platform is crucial for successfully self-hosting your applications and services. Two of the most popular platforms for virtualization are &lt;strong>Proxmox Virtual Environment (Proxmox VE)&lt;/strong> and &lt;strong>VMware ESXi&lt;/strong>. Both have their strengths, and their suitability largely depends on the specific needs of the user or organization.&lt;/p></description></item><item><title>How to self-hosted password manager (Vaultwarden)</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-password-manager-vaultwarden/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-password-manager-vaultwarden/</guid><description>&lt;h1 id="how-to-self-host-password-manager-vaultwarden">How to Self-Host Password Manager (Vaultwarden)&lt;/h1>
+&lt;p>Choosing the right virtualization platform is crucial for successfully self-hosting your applications and services. Two of the most popular platforms for virtualization are &lt;strong>Proxmox Virtual Environment (Proxmox VE)&lt;/strong> and &lt;strong>VMware ESXi&lt;/strong>. Both have their strengths, and their suitability largely depends on the specific needs of the user or organization.&lt;/p></description></item><item><title>How to running AI models locally with Ollama</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-running-ai-models-locally-with-ollama/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-running-ai-models-locally-with-ollama/</guid><description>&lt;h1 id="how-to-run-ai-models-locally-with-ollama">How to Run AI Models Locally with Ollama&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In the rapidly advancing world of artificial intelligence, running AI models locally is an emerging trend, giving enthusiasts and developers the power to harness AI without relying solely on cloud services. This approach provides greater control over data, security, and customization. Ollama is a robust tool designed for running AI models locally. By enabling AI model deployment within a self-controlled environment, Ollama caters to organizations and individuals seeking to integrate AI capabilities securely and efficiently.&lt;/p></description></item><item><title>How to self-hosted media streaming (Plex, Jellyfin)</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-media-streaming-plex-jellyfin/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-media-streaming-plex-jellyfin/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>title: &amp;#34;How to Self-Host Media Streaming with Plex and Jellyfin&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>date: 2023-10-10
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>description: &amp;#34;A detailed tutorial on how to self-host your media streaming platform using Plex and Jellyfin, with Docker, Ansible, and Proxmox.&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tags: [&amp;#34;Self-Hosting&amp;#34;, &amp;#34;Media Streaming&amp;#34;, &amp;#34;Plex&amp;#34;, &amp;#34;Jellyfin&amp;#34;, &amp;#34;Docker&amp;#34;, &amp;#34;Ansible&amp;#34;, &amp;#34;Proxmox&amp;#34;, &amp;#34;Cloudflare&amp;#34;]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Introduction
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>In an age where digital privacy is paramount, controlling your media streaming setup provides significant advantages. Self-hosting solutions like Plex and Jellyfin empower you to manage, control, and secure your media environment. This tutorial offers a comprehensive guide to help you set up your self-hosted media streaming service using top tools such as Docker, Ansible, Proxmox, and Cloudflare. Whether you&amp;#39;re a privacy enthusiast or simply want unrestrained access to your media library, this guide will get you started.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Why Self-Host Media Streaming?
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Self-hosting media streaming services like Plex and Jellyfin grants you full control over your digital library. Here&amp;#39;s why it&amp;#39;s beneficial:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> **Privacy**: Store your media on hardware you control.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> **Customization**: Tailor your media server to suit your specific needs.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> **Cost efficiency**: Reduce dependency on subscription services.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> **Accessibility**: Stream your content from anywhere in the world.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Prerequisites
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Before diving into the setup, ensure you have the following:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**Hardware**&lt;/span>: A machine with adequate storage and processing power.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**Operating System**&lt;/span>: Ubuntu 20.04 LTS for ease of use and stability.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> &lt;span style="font-weight:bold">**Networking**&lt;/span>: A stable internet connection.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">4.&lt;/span> &lt;span style="font-weight:bold">**Domain**&lt;/span>: A domain name (e.g., from Namecheap) for remote access.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">5.&lt;/span> &lt;span style="font-weight:bold">**Proficiency**&lt;/span>: Basic knowledge of Linux command-line, Docker, and networking.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Step-by-Step Implementation
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">### Step 1: Setting Up Proxmox VE
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**Install Proxmox VE**&lt;/span>: Proxmox is a robust platform for managing virtualized environments.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Download the Proxmox VE ISO installer from [&lt;span style="color:#f92672">Proxmox&amp;#39;s official website&lt;/span>](&lt;span style="color:#a6e22e">https://www.proxmox.com/en/&lt;/span>).
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Follow the [&lt;span style="color:#f92672">installation guide&lt;/span>](&lt;span style="color:#a6e22e">https://pve.proxmox.com/wiki/Installation&lt;/span>) to install on your dedicated server.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**Create a VM**&lt;/span>: Use Proxmox to create a Debian/Ubuntu virtual machine for hosting the media servers.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ``&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> # Create and configure a new VM
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> qm create 100 --name Media-Server --memory 8096 --net0 virtio,bridge=vmbr0
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">### Step 2: Installing Docker
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">1. **Update Repositories and Install Dependencies**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo apt update
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">2. **Add Docker&amp;#39;s GPG Key and Repository**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo add-apt-repository &amp;#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">3. **Install Docker**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo apt update
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo apt install -y docker-ce
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo systemctl start docker
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo systemctl enable docker
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">### Step 3: Deploying Plex and Jellyfin Containers
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">1. **Create a Docker Network**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> docker network create media_net
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">2. **Deploy Plex Container**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> docker run -d --name=plex --network=media_net --restart=unless-stopped -e PLEX_CLAIM=&amp;#34;&amp;lt;your_claim_token&amp;gt;&amp;#34; -e ADVERTISE_IP=&amp;#34;http://your-server-public-ip:32400/&amp;#34; -p 32400:32400 -p 3005:3005 -p 8324:8324 -p 32469:32469 -v /path/to/library:/media -v /plex-config:/config plexinc/pms-docker
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">3. **Deploy Jellyfin Container**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> docker run -d --name=jellyfin --network=media_net --restart=unless-stopped -p 8096:8096 -p 8920:8920 -v /path/to/jellyfin/config:/config -v /path/to/jellyfin/cache:/cache -v /path/to/media:/media jellyfin/jellyfin
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">### Step 4: Configuring Cloudflare DNS for Remote Access
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">1. **Set up DNS**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - Go to your Cloudflare dashboard.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - Add a DNS A record pointing to your Proxmox public IP address.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">2. **Enable Proxy**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - Ensure the &amp;#39;Proxy status&amp;#39; is &amp;#39;Proxied&amp;#39; to protect your server&amp;#39;s IP and enable HTTPS.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">### Step 5: Automating with Ansible
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">1. **Install Ansible on your control node**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo apt update
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> sudo apt install -y ansible
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">2. **Create Ansible Playbook for Docker**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`yaml
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> ---
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - hosts: media_servers
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> become: yes
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> tasks:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - name: Install Docker
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> apt:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> name: [&amp;#39;apt-transport-https&amp;#39;, &amp;#39;ca-certificates&amp;#39;, &amp;#39;curl&amp;#39;, &amp;#39;software-properties-common&amp;#39;]
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> state: present
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> update_cache: yes
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - name: Add Docker GPG key
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> apt_key:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> url: https://download.docker.com/linux/ubuntu/gpg
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> state: present
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - name: Add Docker repository
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> apt_repository:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> repo: &amp;#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> - name: Install Docker-ce
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> apt:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> name: docker-ce
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> state: present
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> update_cache: yes
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">3. **Apply Playbook**:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> ansible-playbook -i hosts docker-playbook.yml
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> `&lt;/span>`&lt;span style="color:#e6db74">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">## Troubleshooting
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">- **Network Issues**: Ensure your firewall/port forwarding rules allow traffic through Plex and Jellyfin ports.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">- **Server Errors**: Inspect Docker logs using `&lt;/span>docker logs &amp;lt;&lt;span style="color:#f92672">container-name&lt;/span>&amp;gt;` for additional insights.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> **DNS Resolution**: Confirm your domain and IP address settings on Cloudflare are correct.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Conclusion
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>By following this guide, you can successfully set up a self-hosted media streaming platform using Plex and Jellyfin. Embracing privacy and customization, you now have a powerful toolset at your disposal to enjoy your media library without compromise. A self-hosted solution is not only more private but also incredibly flexible and cost-efficient. Enjoy streaming!
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This tutorial provides a structured approach to setting up a self-hosted media streaming service, enabling both novices and seasoned administrators to deploy Plex and Jellyfin on their own infrastructure. Through detailed steps and explanations, you can confidently manage your digital media environment.&lt;/p></description></item><item><title>How to self-hosted password manager (Vaultwarden)</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-password-manager-vaultwarden/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-password-manager-vaultwarden/</guid><description>&lt;h1 id="how-to-self-host-password-manager-vaultwarden">How to Self-Host Password Manager (Vaultwarden)&lt;/h1>
 &lt;p>Password management is a fundamental aspect of modern digital security. Choosing to self-host a password manager can significantly enhance your security and give you full control over your data. Vaultwarden, formerly known as Bitwarden_RS, is a lightweight, self-hostable version of Bitwarden—one of the most popular open-source password managers. In this tutorial, we will guide you through setting up your instance of Vaultwarden using Docker and other popular tools like Proxmox, Ansible, and Cloudflare to fortify your password management infrastructure.&lt;/p></description></item><item><title>How to self-hosted VPN (WireGuard/OpenVPN)</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-vpn-wireguardopenvpn/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-vpn-wireguardopenvpn/</guid><description>&lt;h1 id="how-to-self-host-a-vpn-using-wireguardopenvpn">How to Self-Host a VPN Using WireGuard/OpenVPN&lt;/h1>
 &lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>In today&amp;rsquo;s digital age, privacy and secure access to networks are more important than ever. Whether you&amp;rsquo;re looking to protect your online activities, access geographically restricted content, or securely connect to your home network while away, setting up your own VPN can be an excellent solution. With the rise of services like WireGuard and OpenVPN, self-hosting a VPN is both accessible and highly effective.&lt;/p></description></item><item><title>Using GitHub Actions for CI/CD in self-hosted environments</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-1552-using-github-actions-for-cicd-in-self-hosted-environments/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-1552-using-github-actions-for-cicd-in-self-hosted-environments/</guid><description>&lt;h1 id="using-github-actions-for-cicd-in-self-hosted-environments">Using GitHub Actions for CI/CD in Self-hosted Environments&lt;/h1>

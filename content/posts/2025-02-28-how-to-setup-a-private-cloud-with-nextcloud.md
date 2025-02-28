@@ -7,8 +7,6 @@ categories: ["Infrastructure", "Automation"]
 summary: "A comprehensive guide on How to setup a private cloud with Nextcloud."
 ---
 
-# How to setup a private cloud with Nextcloud
-
 Nextcloud is an open-source software suite that provides cloud storage and collaboration services similar to Dropbox, Google Drive, or OneDrive, but with the added benefit of complete control over your data. Setting up a private cloud with Nextcloud gives you the flexibility to host the cloud on your own server, ensuring privacy and security. This tutorial will guide you through the process of setting up a private cloud using Nextcloud.
 
 ## Prerequisites

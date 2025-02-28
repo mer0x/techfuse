@@ -1,106 +1,111 @@
 ---
 date: 2025-02-28
 
-```markdown
----
-title: "How to Self-Host a Media Streaming Service with Plex and Jellyfin"
-date: 2023-10-10
-description: "Detailed tutorial on self-hosting media streaming platforms like Plex and Jellyfin using Docker, Ansible, and more."
-categories: ["DevOps", "Self-Hosting"]
-tags: ["Plex", "Jellyfin", "Docker", "Proxmox", "Ansible", "Cloudflare"]
----
+# Self-Hosting Media Streaming: A Comprehensive Guide to Plex and Jellyfin
 
-# How to Self-Host a Media Streaming Service with Plex and Jellyfin
-
-## Introduction
-
-In the age of digital consumption, media streaming platforms like Netflix, Amazon Prime, and Hulu have become household staples. However, they often come with limitations like restricted media libraries, subscription fees, and privacy concerns. This is where self-hosting your media streaming service using Plex or Jellyfin becomes an attractive alternative. Self-hosting provides complete control over your media library, ensuring privacy and limitless access to your movies, TV shows, and music.
-
-### Why Self-Host Media Streaming?
-
-1. **Privacy Control**: Keep your viewing habits and personal data out of third-party hands.
-2. **Cost Efficiency**: Avoid recurring subscription fees of commercial platforms.
-3. **Customizability**: Tailor features and configurations to your liking.
-4. **Unlimited Library**: Host all your media without storage restrictions.
-
-### Best Tools for Self-Hosting
-
-- **Plex**: A popular media server that makes it easy to organize and stream your personal media.
-- **Jellyfin**: An open-source alternative to Plex, offering privacy without subscriptions.
-- **Docker**: Simplifies deployment and management of Plex/Jellyfin through containerization.
-- **Ansible**: Automates server setup and application deployment.
-- **Proxmox**: A virtualization solution for managing container and VM deployments.
-- **Cloudflare**: Enhances security and performance for remote access, including a dynamic DNS solution.
+In the age of streaming services, self-hosting your media server offers numerous advantages, such as complete control over your data, costs savings on subscription fees, and customizability. Among the popular self-hosting tools are Plex and Jellyfin, both of which offer robust media management capabilities. This tutorial guides you through the process of self-hosting a media server using Plex and Jellyfin, ensuring a seamless streaming experience.
 
 ## Prerequisites
 
-- **Basic Understanding of Networking and Linux**: Essential for managing server setups and configurations.
-- **Access to a Server or NAS**: Can be a home server, VPS, or a dedicated machine such as a Synology NAS.
-- **Domain Name**: For accessing your service remotely.
-- **Cloudflare Account**: Recommended for handling DNS and providing secure access.
-- **Docker & Docker-Compose**: Installed on the server to simplify application deployment.
+Before diving into the implementation, ensure you have the following prerequisites covered:
+
+- Basic knowledge of Linux command line operations.
+- An up-to-date Linux server (Ubuntu 20.04 LTS or similar).
+- Docker and Docker Compose installed.
+- A domain name for accessing your server.
+- A Cloudflare account for managing DNS if needed.
+- Optional: A virtualization tool like Proxmox if you prefer to use VMs for segregation.
 
 ## Step-by-Step Implementation
 
-### Step 1: Set Up Your Server or NAS
+### Step 1: Prepare Your Server Environment
 
-It's imperative to have a reliable server for hosting your media. Install a Linux distribution such as Ubuntu Server or CentOS. On a NAS, ensure that Docker is supported.
-
-### Step 2: Set Up Docker and Docker-Compose
-
-Install Docker and Docker-Compose on your Ubuntu server using:
+#### Update and Upgrade Your Server
 
 ```bash
-sudo apt update
-sudo apt install docker.io docker-compose
-sudo systemctl start docker
-sudo systemctl enable docker
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y curl
 ```
 
-### Step 3: Deploy Plex Using Docker
+#### Install Docker
 
-Create a directory for Docker configurations:
+To install Docker, use the following command:
 
 ```bash
-mkdir -p ~/docker/plex
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
 ```
 
-Create a `docker-compose.yml` file:
+Log out and log back in for group changes to take effect.
+
+#### Install Docker Compose
+
+Install Docker Compose using the following command:
+
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/2.3.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Verify the installation:
+
+```bash
+docker-compose --version
+```
+
+### Step 2: Setup Plex Media Server
+
+#### Create a Docker Compose File
+
+Create a directory for Plex and navigate into it.
+
+```bash
+mkdir ~/plex && cd ~/plex
+```
+
+Create a `docker-compose.yml` file with the following content:
 
 ```yaml
-version: "3.8"
+version: '3.8'
 services:
   plex:
-    image: plexinc/pms-docker
+    image: lscr.io/linuxserver/plex
     container_name: plex
-    network_mode: host
     environment:
-      - PLEX_CLAIM=YOUR_PLEX_CLAIM
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - PLEX_CLAIM=yourClaimToken # Optional - for sign in
     volumes:
-      - /path/to/plex/config:/config
-      - /path/to/plex/transcode:/transcode
-      - /path/to/media:/media
+      - /path/to/library/config:/config
+      - /path/to/library/tvshows:/data/tvshows
+      - /path/to/library/movies:/data/movies
+    network_mode: host
     restart: unless-stopped
 ```
 
-Run the Docker container:
+Replace the `/path/to/library` paths with actual paths on your server. Obtain a `PLEX_CLAIM` token from [Plex website](https://plex.tv/claim) for easier setup.
+
+#### Deploy Plex
+
+Run the docker-compose command to start Plex:
 
 ```bash
-cd ~/docker/plex
 docker-compose up -d
 ```
 
-Access Plex via `http://<YOUR_SERVER_IP>:32400/web`.
+### Step 3: Setup Jellyfin Media Server
 
-### Step 4: Deploy Jellyfin Using Docker
+#### Create a Docker Compose File for Jellyfin
 
-Create a directory for Jellyfin:
+Create a directory for Jellyfin and navigate into it.
 
 ```bash
-mkdir -p ~/docker/jellyfin
+mkdir ~/jellyfin && cd ~/jellyfin
 ```
 
-Create a `docker-compose.yml` file for Jellyfin:
+Create a `docker-compose.yml` file with the following content:
 
 ```yaml
 version: '3.8'
@@ -108,91 +113,61 @@ services:
   jellyfin:
     image: jellyfin/jellyfin
     container_name: jellyfin
-    network_mode: host
     volumes:
-      - /path/to/jellyfin/config:/config
-      - /path/to/jellyfin/cache:/cache
-      - /path/to/media:/media
+      - /path/to/config:/config
+      - /path/to/cache:/cache
+      - /path/to/library/tvshows:/data/tvshows
+      - /path/to/library/movies:/data/movies
+    ports:
+      - 8096:8096
     restart: unless-stopped
 ```
 
-Run the Jellyfin container:
+Replace the `/path/to/library` paths with actual paths on your server.
+
+#### Deploy Jellyfin
+
+Run the docker-compose command to start Jellyfin:
 
 ```bash
-cd ~/docker/jellyfin
 docker-compose up -d
 ```
 
-Access Jellyfin via `http://<YOUR_SERVER_IP>:8096`.
+### Step 4: Configure Access Through Cloudflare
 
-### Step 5: Use Ansible for Automation
+If you wish to access your media server externally using a domain name:
 
-Create an Ansible playbook for setting up media services:
+1. Set up a subdomain for your home server in your domain's DNS settings, pointing to your public IP.
+2. Use a proxy service like Cloudflare for added security:
+   - Add a DNS entry in Cloudflare for `plex.yourdomain.com` and `jellyfin.yourdomain.com`, both pointed to your server's public IP.
+   - Enable "Proxy Status" to provide additional DDoS protection.
 
-```yaml
----
-- name: Setup Media Server
-  hosts: media_server
-  become: yes
-  tasks:
-    - name: Install Docker
-      apt: name=docker.io state=present update_cache=yes
+### Step 5: Proxmox Virtualization (Optional)
 
-    - name: Install Docker-Compose
-      apt: name=docker-compose state=present
+If using Proxmox to manage virtual environments, follow these steps:
 
-    - name: Deploy Plex
-      docker_container:
-        name: plex
-        image: plexinc/pms-docker
-        state: started
-        restart_policy: unless-stopped
-        volumes:
-          - /path/to/plex/config:/config
-          - /path/to/media:/media
-        network_mode: host
-
-    - name: Deploy Jellyfin
-      docker_container:
-        name: jellyfin
-        image: jellyfin/jellyfin
-        state: started
-        restart_policy: unless-stopped
-        volumes:
-          - /path/to/jellyfin/config:/config
-          - /path/to/media:/media
-        network_mode: host
-```
-
-Run the playbook:
-
-```bash
-ansible-playbook -i inventory setup_media_server.yml
-```
-
-### Step 6: Configure Cloudflare for Secure Access
-
-- Configure your DNS settings in Cloudflare to point your domain to your server's IP.
-- Enable proxy and SSL settings to enhance security.
+1. Create a new VM for each media server and install the appropriate Linux distribution.
+2. Follow the Docker and Docker Compose installation instructions within each VM.
 
 ## Troubleshooting
 
 ### Common Issues
 
-- **Ports Unavailable**: Ensure no other service is using the required ports (e.g., 32400 for Plex).
-- **Permission Errors**: Validate that the Docker user has read/write permissions to the media directories.
-- **Network Issues**: Verify Docker is running in host mode or configure attached network settings appropriately.
+1. **Port Conflicts**: Ensure there are no port conflicts. Change the host ports in `docker-compose.yml` if needed.
+2. **Permissions**: Ensure the user running Docker has permissions to access the media directories.
+3. **Firewall Rules**: Open ports 32400 (Plex) and 8096 (Jellyfin) on your firewall if you cannot access the services.
 
-### Logs and Diagnostics
+### Debugging
 
-- Inspect Docker container logs using `docker logs <container_name>`.
-- Check Docker and system service status with `systemctl status docker`.
+To check the logs and see detailed error messages, use:
+
+```bash
+docker logs plex
+docker logs jellyfin
+```
 
 ## Conclusion
 
-By following the steps outlined in this guide, you have equipped yourself with the knowledge and tools to self-host a full-fledged media streaming service using Plex and Jellyfin. With proper configuration, you can enjoy seamless and secure access to your personal media library. The tools and solutions described here provide a robust framework, ensuring that your setup is both reliable and scalable. Whether you're looking to reclaim privacy, cut costs, or relish in the personal satisfaction of managing your media, self-hosting provides these incredible benefits and more.
+Setting up a self-hosted media streaming server using Plex and Jellyfin can significantly enhance your media consumption experience while providing unprecedented control and cost savings. By leveraging Docker and optionally Proxmox, you can ensure your setup is scalable, manageable, and secure. Whether you're streaming to your living room or abroad, following these instructions will make sure you're never far from your media. Enjoy the capabilities of your self-hosted media server!
 
 ---
-
-Embrace the empowerment that comes with self-hosting, and explore the boundless possibilities of your personalized media server!
-```

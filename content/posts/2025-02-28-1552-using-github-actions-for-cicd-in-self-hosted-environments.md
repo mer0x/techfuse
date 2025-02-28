@@ -1,6 +1,6 @@
 ---
 title: "Using GitHub Actions for CI/CD in self-hosted environments"
-date: 2025-02-28-1552
+date: 2025-02-28
 tags: ["Self-Hosting", "DevOps", "Homelab", "Networking"]
 categories: ["IT Tutorials"]
 draft: false

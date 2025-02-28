@@ -1,5 +1,140 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>DevOps on Tech Fuse News</title><link>https://mer0x.github.io/techfuse/tags/devops/</link><description>Recent content in DevOps on Tech Fuse News</description><generator>Hugo -- 0.145.0</generator><language>en-us</language><lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mer0x.github.io/techfuse/tags/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Set Up Docker Networking</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-set-up-docker-networking/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-set-up-docker-networking/</guid><description>&lt;hr>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>DevOps on Tech Fuse News</title><link>https://mer0x.github.io/techfuse/tags/devops/</link><description>Recent content in DevOps on Tech Fuse News</description><generator>Hugo -- 0.145.0</generator><language>en-us</language><lastBuildDate>Fri, 28 Feb 2025 16:11:13 +0000</lastBuildDate><atom:link href="https://mer0x.github.io/techfuse/tags/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>How to deploying Kubernetes on bare-metal</title><link>https://mer0x.github.io/techfuse/posts/how-to-deploying-kubernetes-on-bare-metal/</link><pubDate>Fri, 28 Feb 2025 16:11:13 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/how-to-deploying-kubernetes-on-bare-metal/</guid><description>&lt;h1 id="how-to-deploy-kubernetes-on-bare-metal-a-detailed-technical-tutorial">How to Deploy Kubernetes on Bare-Metal: A Detailed Technical Tutorial&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Kubernetes has become a cornerstone for managing containerized applications in production environments. Although cloud platforms like AWS, Google Cloud, and Azure provide powerful managed Kubernetes services, a growing number of organizations are opting to deploy Kubernetes on bare-metal servers. This approach offers increased control, improved performance, and potentially lower costs due to minimized dependencies on cloud vendors. In this comprehensive guide, we will walk through the steps to successfully deploy Kubernetes on bare-metal servers.&lt;/p></description></item><item><title>How to self-host nextcloud securely</title><link>https://mer0x.github.io/techfuse/posts/how-to-self-host-nextcloud-securely/</link><pubDate>Fri, 28 Feb 2025 16:02:55 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/how-to-self-host-nextcloud-securely/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Self-hosting Nextcloud offers a personal or organizational solution to manage and share files, calendars, contacts, and more. By taking control of sensitive data, you avoid third-party cloud storage risks, ensuring compliance with data protection regulations. Nextcloud offers extensive features and is supported by a vibrant community making it an ideal choice for self-hosting. This tutorial will guide you through securely self-hosting Nextcloud using Docker, leveraging tools like Nginx for web servers, Let&amp;rsquo;s Encrypt for free SSL/TLS certificates, and fail2ban for intrusion prevention.&lt;/p></description></item><item><title>How to homelab automation with Ansible</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-homelab-automation-with-ansible/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-homelab-automation-with-ansible/</guid><description>&lt;h1 id="how-to-homelab-automation-with-ansible-a-comprehensive-guide">How to Homelab Automation with Ansible: A Comprehensive Guide&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In today&amp;rsquo;s rapidly evolving tech landscape, automation has become a cornerstone of efficient IT infrastructure management. Self-hosted homelabs allow tech enthusiasts and IT professionals to create, experiment, and manage their environments without involving third-party services. Using Ansible, a powerful automation tool, you can streamline processes, minimize manual intervention, and cultivate consistency within your self-hosted projects.&lt;/p>
+&lt;p>Ansible is a versatile tool renowned for its simplicity, agentless architecture, and wide range of integrations, making it a favorite for managing complex environments. In this tutorial, we&amp;rsquo;ll delve into the world of homelab automation using Ansible. We&amp;rsquo;ll cover practical, real-world examples and offer insights into integrating with tools like Docker, Proxmox, and Cloudflare to enhance your homelab operations.&lt;/p></description></item><item><title>How to self-hosted VPN (WireGuard/OpenVPN)</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-vpn-wireguardopenvpn/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-self-hosted-vpn-wireguardopenvpn/</guid><description>&lt;h1 id="how-to-self-host-a-vpn-using-wireguardopenvpn">How to Self-Host a VPN Using WireGuard/OpenVPN&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In today&amp;rsquo;s digital age, privacy and secure access to networks are more important than ever. Whether you&amp;rsquo;re looking to protect your online activities, access geographically restricted content, or securely connect to your home network while away, setting up your own VPN can be an excellent solution. With the rise of services like WireGuard and OpenVPN, self-hosting a VPN is both accessible and highly effective.&lt;/p></description></item><item><title>How to Set Up Docker Networking</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-set-up-docker-networking/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-how-to-set-up-docker-networking/</guid><description>&lt;hr>
 &lt;h2 id="tags-docker-networking-scalable-applications-containers">title: &amp;ldquo;How to Set Up Docker Networking for Scalable Applications&amp;rdquo;
 tags: [&amp;ldquo;Docker&amp;rdquo;, &amp;ldquo;Networking&amp;rdquo;, &amp;ldquo;Scalable Applications&amp;rdquo;, &amp;ldquo;Containers&amp;rdquo;]&lt;/h2>
 &lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>In this tutorial, we will delve into the intricacies of setting up Docker networking specifically tailored for scalable applications. Docker, a powerful platform for developing, shipping, and running applications inside portable containers, also provides robust networking features. We&amp;rsquo;ll explore how to effectively implement Docker networking to ensure your applications can scale seamlessly and handle increasing loads efficiently.&lt;/p></description></item></channel></rss>
+&lt;p>In this tutorial, we will delve into the intricacies of setting up Docker networking specifically tailored for scalable applications. Docker, a powerful platform for developing, shipping, and running applications inside portable containers, also provides robust networking features. We&amp;rsquo;ll explore how to effectively implement Docker networking to ensure your applications can scale seamlessly and handle increasing loads efficiently.&lt;/p></description></item><item><title>Using GitHub Actions for CI/CD in self-hosted environments</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-1552-using-github-actions-for-cicd-in-self-hosted-environments/</link><pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-1552-using-github-actions-for-cicd-in-self-hosted-environments/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>title: &amp;#34;Using GitHub Actions for CI/CD in Self-hosted Environments&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tags: [&amp;#34;GitHub&amp;#34;, &amp;#34;CI/CD&amp;#34;, &amp;#34;DevOps&amp;#34;, &amp;#34;Self-hosted&amp;#34;, &amp;#34;Automation&amp;#34;]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Using GitHub Actions for CI/CD in Self-hosted Environments
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>GitHub Actions is a powerful platform that allows developers to automate tasks within their software development lifecycle. It seamlessly integrates with GitHub repositories, enabling continuous integration and deployment (CI/CD). While GitHub provides cloud-hosted runners, there are scenarios where you might want to use self-hosted runners, such as requiring specific hardware, software configurations, or enhanced control over the execution environment.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>In this tutorial, we&amp;#39;ll explore how to set up GitHub Actions for CI/CD in self-hosted environments, ensuring you leverage its full potential.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Prerequisites
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Before diving into implementation, ensure you have the following:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**GitHub Account**&lt;/span>: A GitHub account to host your repositories and workflows.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**Repository**&lt;/span>: A GitHub repository where you&amp;#39;ll configure GitHub Actions.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> &lt;span style="font-weight:bold">**Self-hosted Runner**&lt;/span>: A physical or virtual machine to act as a runner (could be on-premises or a cloud VM).
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">4.&lt;/span> &lt;span style="font-weight:bold">**Basic Knowledge of Git and CI/CD**&lt;/span>: Familiarity with source control management and continuous integration/deployment concepts will be helpful.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">5.&lt;/span> &lt;span style="font-weight:bold">**Permissions**&lt;/span>: Admin access to the GitHub repository to add and manage self-hosted runners.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Implementation
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">### Step 1: Setting Up a Self-hosted Runner
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#### 1.1 Configuring the Runner
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**Access Runner Settings**&lt;/span>: Navigate to your GitHub repository, click on &lt;span style="font-weight:bold">**Settings**&lt;/span>, then &lt;span style="font-weight:bold">**Actions**&lt;/span>, and select &lt;span style="font-weight:bold">**Runners**&lt;/span>.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**Add Runner**&lt;/span>: Click on &lt;span style="font-weight:bold">**New self-hosted runner**&lt;/span>. Choose the appropriate operating system (Linux, macOS, or Windows) for your environment.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> &lt;span style="font-weight:bold">**Download and Install**&lt;/span>: Follow the instructions to download and install the runner application. This typically involves:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Downloading a compressed file (scripts, binaries), e.g., &lt;span style="color:#e6db74">`actions-runner-linux-x64-2.285.1.tar.gz`&lt;/span>.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Unpacking the archive and navigating to the directory where the runner will execute.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ```shell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ tar xzf actions-runner-linux-x64-2.285.1.tar.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>
+&lt;p>&lt;strong>Configure Runner&lt;/strong>: Configure the runner with a unique token generated from GitHub. This involves executing a command such as:&lt;/p></description></item><item><title>Securing your network with pfSense firewall</title><link>https://mer0x.github.io/techfuse/posts/2025-02-28-1557-securing-your-network-with-pfsense-firewall/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mer0x.github.io/techfuse/posts/2025-02-28-1557-securing-your-network-with-pfsense-firewall/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>title: &amp;#34;Securing Your Network with pfSense Firewall&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tags: [&amp;#34;pfSense&amp;#34;, &amp;#34;Network Security&amp;#34;, &amp;#34;Firewall&amp;#34;, &amp;#34;Open Source&amp;#34;, &amp;#34;Network Management&amp;#34;]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># Securing Your Network with pfSense Firewall
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Securing your network is crucial in today&amp;#39;s digital age where cyber threats are increasingly sophisticated. One of the most effective ways to safeguard your network is by implementing a robust firewall. pfSense, an open-source firewall software, offers comprehensive security features, scalability, and reliability, making it an excellent choice for both small and large networks. In this tutorial, we will explore how to secure your network using pfSense, with detailed steps and real-world examples.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Prerequisites
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Before diving into the implementation, ensure that you have the following prerequisites in place:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**Hardware Requirements**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> A dedicated machine or virtual environment for pfSense installation. A low-power Intel or AMD processor with at least 1GB of RAM is recommended.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Two network interfaces (one for WAN and one for LAN) to interface with your network.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**pfSense Software**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Download the latest stable version of the pfSense ISO. You can obtain it from the official [&lt;span style="color:#f92672">pfSense website&lt;/span>](&lt;span style="color:#a6e22e">https://www.pfsense.org/download/&lt;/span>).
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> &lt;span style="font-weight:bold">**Networking Knowledge**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Understanding of basic networking concepts, including IP routing, subnets, and port forwarding.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Implementation
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">### Step 1: Installing pfSense
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**Boot from the pfSense ISO**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Burn the pfSense ISO to a USB drive or CD and boot your machine from this media. You should be presented with a pfSense installation menu.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**Installation Steps**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Select &amp;#34;Install&amp;#34; to start the installation process. Follow the prompts to configure disk partitions. Generally, the default options are sufficient.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">3.&lt;/span> &lt;span style="font-weight:bold">**Network Configuration**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> After installation, configure the network interfaces. Assign the correct interface to WAN (typically the interface connected to your internet gateway) and LAN (the interface connected to your internal network).
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">4.&lt;/span> &lt;span style="font-weight:bold">**Assigning IP Addresses**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Access the pfSense console and assign a static IP address to your LAN interface. For instance, &lt;span style="color:#e6db74">`192.168.1.1/24`&lt;/span> is commonly used as the LAN gateway.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">### Step 2: Initial Configuration
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**Access the Web Interface**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Connect a device to your LAN. In a web browser, go to &lt;span style="color:#e6db74">`http://192.168.1.1`&lt;/span> to access the pfSense web interface.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Default credentials are &lt;span style="color:#e6db74">`admin`&lt;/span>/&lt;span style="color:#e6db74">`pfsense`&lt;/span>. Change these immediately for security purposes.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**Wizard Setup**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Use the pfSense setup wizard to configure the basic firewall settings. Set a strong admin password, configure WAN type (DHCP or Static), and enable DHCP server on the LAN interface if necessary.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">### Step 3: Configuring Firewall Rules
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">1.&lt;/span> &lt;span style="font-weight:bold">**Default Rules**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> pfSense includes default rules that block all inbound traffic on the WAN interface and allow all outbound from LAN. These settings preserve security for new installations.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">2.&lt;/span> &lt;span style="font-weight:bold">**Creating Custom Rules**&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> Navigate to &lt;span style="font-weight:bold">**Firewall &amp;gt; Rules**&lt;/span>. Under the &lt;span style="font-weight:bold">**LAN**&lt;/span> tab, create a new rule allowing DNS traffic:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ```shell
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Interface: LAN
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Protocol: TCP/UDP
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Source: LAN Net
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Destination: LAN Address
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Destination Port Range: DNS (53)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>For web browsing, allow HTTP/HTTPS traffic under LAN:&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>Interface: LAN
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Protocol: TCP
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Source: LAN Net
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Destination: any
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Destination Port Range: HTTP &lt;span style="color:#f92672">(&lt;/span>80&lt;span style="color:#f92672">)&lt;/span> / HTTPS &lt;span style="color:#f92672">(&lt;/span>443&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>&lt;strong>Secure WAN Access&lt;/strong>:
+&lt;ul>
+&lt;li>Limit WAN access by adding strict rules. For instance:&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>Interface: WAN
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Protocol: TCP
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Source: any
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Destination: WAN Address
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Destination Port Range: OpenVPN &lt;span style="color:#f92672">(&lt;/span>1194&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>This allows only VPN traffic through, ensuring secure remote access.&lt;/li>
+&lt;/ol>
+&lt;h3 id="step-4-configuring-nat-network-address-translation">Step 4: Configuring NAT (Network Address Translation)&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Port Forwarding&lt;/strong>:&lt;/p></description></item></channel></rss>

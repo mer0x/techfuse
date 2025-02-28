@@ -28,7 +28,7 @@ jobs:
     - name: Run script to generate article
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      run: python $(pwd)/scripts/generate_test_post.py
+      run: python $(pwd)/scripts/generate_post_blog.py
 
     - name: Commit and Push new post
       run: |

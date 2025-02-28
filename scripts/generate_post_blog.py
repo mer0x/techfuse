@@ -89,12 +89,8 @@ def save_article(topic, content):
     post_path = os.path.join(POSTS_DIR, f"{date_str}-{slug}.md")
 
     frontmatter = f"""---
-title: "{topic}"
 date: {date_str}
-tags: ["Self-Hosting", "DevOps", "Homelab", "Networking"]
-categories: ["IT Tutorials"]
-draft: false
----
+
 """
 
     with open(post_path, "w", encoding="utf-8") as f:

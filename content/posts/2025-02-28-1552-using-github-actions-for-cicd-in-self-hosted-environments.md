@@ -6,11 +6,6 @@ categories: ["IT Tutorials"]
 draft: false
 ---
 
-```markdown
----
-title: "Using GitHub Actions for CI/CD in Self-hosted Environments"
-tags: ["GitHub", "CI/CD", "DevOps", "Self-hosted", "Automation"]
----
 
 # Using GitHub Actions for CI/CD in Self-hosted Environments
 

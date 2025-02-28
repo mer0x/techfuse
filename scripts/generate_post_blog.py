@@ -61,9 +61,9 @@ def generate_article(topic):
     You are a DevOps and self-hosting expert. 
     Your task is to write a **detailed technical tutorial** for: "{topic}".
 
-    - The tutorial must be **at least 1200 words long**.
+    - The tutorial must be **at least 1000 words long**.
     - Include **real-world tested code examples** (Docker, Ansible, Proxmox, Cloudflare, etc.).
-    - Structure: **Introduction, Prerequisites, Implementation, Troubleshooting, Conclusion**.
+    - Structure: **Introduction, Prerequisites, Step-by-Step Implementation, Troubleshooting, Conclusion**.
     - Use **Markdown format** for Hugo.
     - Optimize for SEO with headings and structured formatting.
     
@@ -80,18 +80,17 @@ def generate_article(topic):
 
     return response.choices[0].message.content
 
-# Salvăm articolul generat în Hugo cu format de dată corect (ISO 8601)
+# Salvăm articolul generat în Hugo cu format de dată corect (FĂRĂ ORĂ, doar YYYY-MM-DD)
 def save_article(topic, content):
-    now = datetime.datetime.now(datetime.timezone.utc)
-    date_str = now.strftime("%Y-%m-%dT%H:%M:%SZ")  # Format compatibil Hugo
+    date_str = datetime.datetime.now().strftime("%Y-%m-%d")  # Format compatibil Hugo
 
     slug = topic.lower().replace(" ", "-").replace("/", "").replace(":", "")
 
-    post_path = os.path.join(POSTS_DIR, f"{slug}.md")
+    post_path = os.path.join(POSTS_DIR, f"{date_str}-{slug}.md")
 
     frontmatter = f"""---
 title: "{topic}"
-date: "{date_str}"
+date: {date_str}
 tags: ["Self-Hosting", "DevOps", "Homelab", "Networking"]
 categories: ["IT Tutorials"]
 draft: false

@@ -2,7 +2,6 @@ import openai
 import datetime
 import os
 import random
-import json
 
 # Configurare OpenAI
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -11,13 +10,24 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 REPO_PATH = os.path.dirname(os.path.abspath(__file__)) + "/../"
 POSTS_DIR = os.path.join(REPO_PATH, "content/posts")
 
-# Cuvinte-cheie pentru self-hosting și IT
+# Cuvinte-cheie pentru subiecte de self-hosting și IT
 KEYWORDS = [
-    "self-hosted", "homelab", "proxmox", "docker", "kubernetes", "cloudflare",
-    "ansible", "grafana", "prometheus", "wireguard", "nextcloud", "pihole",
-    "vaultwarden", "jellyfin", "plex", "email server", "git self-hosting",
-    "CI/CD self-hosted", "matrix server", "xmpp server", "borg backup",
-    "traefik", "cloud storage self-hosted", "home automation"
+    "self-hosted VPN (WireGuard/OpenVPN)",
+    "homelab automation with Ansible",
+    "Proxmox vs ESXi",
+    "self-hosted cloud with Nextcloud",
+    "Git self-hosting (Gitea, GitLab)",
+    "monitoring with Prometheus & Grafana",
+    "self-hosting an email server (Mailcow)",
+    "network-wide ad blocking with Pi-hole",
+    "self-hosted password manager (Vaultwarden)",
+    "hosting a Matrix server for secure chat",
+    "deploying Kubernetes on bare-metal",
+    "home automation with Home Assistant",
+    "self-hosted media streaming (Plex, Jellyfin)",
+    "automated backups with BorgBackup",
+    "self-hosting a blog with Hugo & GitHub Pages",
+    "running AI models locally with Ollama",
 ]
 
 # Verifică articolele existente pentru a evita duplicate
@@ -40,25 +50,24 @@ def choose_unique_topic():
     existing_titles = get_existing_topics()
 
     while True:
-        random_keyword = random.choice(KEYWORDS)
-        topic = f"How to self-host {random_keyword} securely"
+        topic = f"How to {random.choice(KEYWORDS)}"
         
         if topic not in existing_titles:
             return topic
 
-# Generare articol folosind GPT-4o cu research pe cuvântul-cheie ales
+# Generare articol folosind GPT-4o cu research înainte
 def generate_article(topic):
     prompt = f"""
-    You are a highly skilled DevOps engineer and homelab expert. 
-    Your task is to write a **detailed, technical tutorial** for the topic: "{topic}".
+    You are a DevOps and self-hosting expert. 
+    Your task is to write a **detailed technical tutorial** for: "{topic}".
 
-    - The tutorial must be **at least 1000 words long**.
-    - Include **real-world tested code examples** (Linux CLI, Docker, Ansible, Proxmox, etc.).
-    - Structure: **Introduction, Prerequisites, Step-by-Step Implementation, Troubleshooting, Conclusion**.
+    - The tutorial must be **at least 1200 words long**.
+    - Include **real-world tested code examples** (Docker, Ansible, Proxmox, Cloudflare, etc.).
+    - Structure: **Introduction, Prerequisites, Implementation, Troubleshooting, Conclusion**.
     - Use **Markdown format** for Hugo.
-    - Include relevant **tags**.
-
-    First, do a brief research on why self-hosting {topic} is important and the best tools available for it. Then, generate the tutorial.
+    - Optimize for SEO with headings and structured formatting.
+    
+    First, research why self-hosting {topic} is important and the best tools available. Then generate the tutorial.
     """
 
     client = openai.OpenAI(api_key=OPENAI_API_KEY)
@@ -71,9 +80,11 @@ def generate_article(topic):
 
     return response.choices[0].message.content
 
-# Salvăm articolul generat în Hugo cu un format de date corect (ISO 8601)
+# Salvăm articolul generat în Hugo cu format de dată corect (ISO 8601)
 def save_article(topic, content):
- date_str = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
+    now = datetime.datetime.now(datetime.timezone.utc)
+    date_str = now.strftime("%Y-%m-%dT%H:%M:%SZ")  # Format compatibil Hugo
+
     slug = topic.lower().replace(" ", "-").replace("/", "").replace(":", "")
 
     post_path = os.path.join(POSTS_DIR, f"{slug}.md")

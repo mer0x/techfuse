@@ -19,3 +19,15 @@
 
 - name: "Continuous Deployment"
   description: "Articles related to Continuous Deployment"
+
+- name: "Dashy"
+  description: "Articles related to Dashy"
+
+- name: "Personal Dashboard"
+  description: "Articles related to Personal Dashboard"
+
+- name: "Ansible"
+  description: "Articles related to Ansible"
+
+- name: "Bash Scripting"
+  description: "Articles related to Bash Scripting"

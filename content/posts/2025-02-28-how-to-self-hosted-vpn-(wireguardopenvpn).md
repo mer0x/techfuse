@@ -1,190 +1,176 @@
 ---
-title: "How to self-hosted VPN (WireGuard/OpenVPN)"
 date: 2025-02-28
-tags: ["Self-Hosting", "DevOps", "Homelab", "Networking"]
-categories: ["IT Tutorials"]
-draft: false
----
-# How to Self-Host a VPN Using WireGuard/OpenVPN
+
+# Ultimate Guide to Self-Hosting a VPN Using WireGuard or OpenVPN
 
 ## Introduction
 
-In today's digital age, privacy and secure access to networks are more important than ever. Whether you're looking to protect your online activities, access geographically restricted content, or securely connect to your home network while away, setting up your own VPN can be an excellent solution. With the rise of services like WireGuard and OpenVPN, self-hosting a VPN is both accessible and highly effective.
-
-This tutorial aims to guide you on how to set up your own VPN server using WireGuard or OpenVPN. By self-hosting, you're not only saving on monthly subscription costs of traditional VPN services, but you're also gaining full control over your data and its privacy.
+In an era where online privacy is becoming increasingly crucial, owning a Virtual Private Network (VPN) can provide unparalleled control over your data. Self-hosted VPN solutions, such as WireGuard and OpenVPN, offer a secure way to protect your online activities. Unlike commercial VPN services that operate as middlemen, self-hosting ensures you know who controls your data—because you do. This guide details how you can deploy a self-hosted VPN using WireGuard or OpenVPN with real-world tested examples using Docker and Ansible, ensuring a swift, secure setup.
 
 ## Prerequisites
 
-Before we dive into the technical setup, you'll need to have the following:
+Before diving into the implementation process, you must gather some essential tools and information:
 
-- A **VPS or a dedicated server** with a public IP address.
-- **Basic knowledge of Linux command line**.
-- **SSH access** to your server.
-- **Docker** installed on your server.
-- Optional: A public **domain** (helpful for easier connectivity).
-- Optional: **Cloudflare** account for easy DNS management.
+- A server or virtual machine with a public IP address. You can use providers like DigitalOcean, Linode, or your own Proxmox setup.
+- Basic understanding of Linux command-line operations.
+- An up-to-date system running a Linux distribution like Ubuntu 20.04 or later.
+- Docker and Docker Compose installed.
+- Ansible installed on your local machine.
+- A Cloudflare account for managing DNS (optional but recommended for easy domain management).
 
 ## Step-by-Step Implementation
 
-### 1. Choose a VPN Solution
+### Step 1: Setting Up Your Server
 
-For this tutorial, we'll be looking at two popular open-source options: **WireGuard** and **OpenVPN**. Both have unique benefits:
+#### 1.1 Choose Your Hosting Platform
 
-- **WireGuard**: Known for its performance, simplicity, and modern cryptography. It offers minimal latency and is easy to set up.
-- **OpenVPN**: Known for its flexibility and robust security features. It's widely used and battle-tested over the years.
+Select a cloud provider or server that suits your needs. If utilizing Proxmox, ensure your VM is allocated with at least 1GB RAM and enough storage to handle traffic.
 
-### 2. Install Docker
+#### 1.2 Ensure Up-to-Date System
 
-Ensure your server has Docker installed. If not, you can install Docker using the following command:
+Log into your server and run:
 
 ```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### Step 2: Installing Docker
+
+Execute the following commands to install Docker:
+
+```bash
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common -y
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
 sudo apt update
-sudo apt install -y docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
+sudo apt install docker-ce -y
 ```
 
-### 3. Set Up the VPN Server
-
-We'll demonstrate how to set up both WireGuard and OpenVPN using Docker.
-
-#### 3.1 Setting Up WireGuard
-
-1. **Create a Docker-Compose File for WireGuard**:
-
-   Create a directory for WireGuard configuration:
-
-   ```bash
-   mkdir ~/wireguard
-   cd ~/wireguard
-   ```
-
-   Create a `docker-compose.yml` file:
-
-   ```yaml
-   version: '2.1'
-   services:
-     wireguard:
-       image: linuxserver/wireguard
-       container_name: wireguard
-       cap_add:
-         - NET_ADMIN
-         - SYS_MODULE
-       environment:
-         - PUID=1000
-         - PGID=1000
-         - TZ=Etc/UTC
-         - SERVERURL=your-server-ip
-         - SERVERPORT=51820
-         - PEERS=1
-         - PEERDNS=auto
-       volumes:
-         - ./config:/config
-         - /lib/modules:/lib/modules
-       ports:
-         - 51820:51820/udp
-       sysctls:
-         - net.ipv4.conf.all.src_valid_mark=1
-       restart: unless-stopped
-   ```
-
-   Replace `your-server-ip` with your server's public IP address.
-
-2. **Launch the WireGuard Server**:
-
-   Run the following command to start the server:
-
-   ```bash
-   docker-compose up -d
-   ```
-
-3. **Configure the Client**:
-
-   After launching the container, check the configuration files in the `~/wireguard/config/etc/wireguard` directory. The `.conf` file created will be for the client; copy it to your device and use a compatible WireGuard app to connect.
-
-#### 3.2 Setting Up OpenVPN
-
-1. **Deploy OpenVPN using Docker**:
-
-   Create a directory for OpenVPN configuration:
-
-   ```bash
-   mkdir ~/openvpn
-   cd ~/openvpn
-   ```
-
-   Create a `docker-compose.yml` file:
-
-   ```yaml
-   version: '2'
-   services:
-     openvpn:
-       image: kylemanna/openvpn
-       container_name: openvpn
-       cap_add:
-         - NET_ADMIN
-       volumes:
-         - ./ovpn-data:/etc/openvpn
-       ports:
-         - 1194:1194/udp
-       restart: unless-stopped
-   ```
-
-2. **Initialize the OpenVPN Server**:
-
-   Initialize the PKI and set up a server:
-
-   ```bash
-   docker run --rm -v ~/openvpn/ovpn-data:/etc/openvpn --log-driver=none --cap-add=NET_ADMIN kylemanna/openvpn ovpn_genconfig -u udp://your-server-ip
-   docker run --rm -v ~/openvpn/ovpn-data:/etc/openvpn -it kylemanna/openvpn ovpn_initpki
-   ```
-
-   Follow the prompts to complete the initialization.
-
-3. **Create a Client Configuration**:
-
-   Generate a client certificate and configuration:
-
-   ```bash
-   docker run --rm -v ~/openvpn/ovpn-data:/etc/openvpn -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass
-   docker run --rm -v ~/openvpn/ovpn-data:/etc/openvpn kylemanna/openvpn ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
-   ```
-
-   Copy `CLIENTNAME.ovpn` to your client device and import it into your OpenVPN client application.
-
-### 4. Manage DNS (Optional, using Cloudflare)
-
-If you have a domain, it can be helpful to set up a DNS record for easier access. Using Cloudflare:
-
-1. Log into Cloudflare and navigate to the DNS settings of your domain.
-2. Add an "A" or "CNAME" record pointing to your server's IP.
-
-### 5. Security and Firewall Configuration
-
-Ensure your firewall settings allow traffic to your VPN ports:
+Verify the Docker installation:
 
 ```bash
-ufw allow 51820/udp  # For WireGuard
-ufw allow 1194/udp   # For OpenVPN
-ufw enable
+docker --version
 ```
+
+### Step 3: Setting Up WireGuard with Docker
+
+#### 3.1 Create a WireGuard Docker Configuration
+
+Create a new directory for your WireGuard configuration:
+
+```bash
+mkdir ~/wireguard && cd ~/wireguard
+```
+
+Create a `docker-compose.yml` file:
+
+```yaml
+version: '3.8'
+
+services:
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SERVERURL=your-server-url
+      - SERVERPORT=51820
+      - PEERS=1
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.13.13.0
+    volumes:
+      - ./config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+```
+
+#### 3.2 Deploy WireGuard
+
+Deploy using the Docker Compose command:
+
+```bash
+docker-compose up -d
+```
+
+### Step 4: Setting Up OpenVPN with Docker
+
+#### 4.1 Set Up OpenVPN Configuration
+
+Create another directory for OpenVPN:
+
+```bash
+mkdir ~/openvpn && cd ~/openvpn
+```
+
+Create the Docker Compose file:
+
+```yaml
+version: '3'
+
+services:
+  openvpn:
+    image: kylemanna/openvpn
+    container_name: openvpn
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "1194:1194/udp"
+    volumes:
+      - ./config:/etc/openvpn
+    restart: unless-stopped
+```
+
+#### 4.2 Initialize and Start OpenVPN
+
+Generate server configuration:
+
+```bash
+docker run -v $(pwd)/config:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://your-server-url
+docker run -v $(pwd)/config:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki
+```
+
+Start OpenVPN server:
+
+```bash
+docker-compose up -d
+```
+
+### Step 5: DNS Management with Cloudflare (Optional)
+
+To bind your VPN service to a domain, manage your domain DNS via Cloudflare:
+
+1. Log into your Cloudflare account.
+2. Add a DNS entry pointing your domain to the server's public IP.
 
 ## Troubleshooting
 
-1. **Connection Issues**:
-   - Ensure that your server's public IP is correctly configured.
-   - Verify port-forwarding if you're behind a NAT.
+1. **Ports Not Accessible:** Ensure your firewall allows traffic on WireGuard (51820/udp) or OpenVPN (1194/udp) ports.
+   
+2. **Docker Issues:** Restart Docker service with `sudo systemctl restart docker` if containers fail to start.
 
-2. **Slow Connection Speeds**:
-   - Check the server's resources and network bandwidth.
-   - Ensure no bandwidth limit is configured on the VPN server.
-
-3. **Client Errors**:
-   - Check logs: `docker logs wireguard` or `docker logs openvpn` for errors.
-   - Ensure client configuration matches server details.
+3. **Configuration Errors:** Always check the logs with `docker logs wireguard` or `docker logs openvpn` for specific errors.
 
 ## Conclusion
 
-By following this tutorial, you now have a self-hosted VPN setup that grants you complete control over your virtual private network. Whether you chose WireGuard for its speed and simplicity or OpenVPN for its robustness, you've taken a significant step towards enhancing your online privacy. Remember, the security of your VPN largely depends on the practices you maintain. Keep your server updated and regularly review security configurations.
+Self-hosting a VPN using WireGuard or OpenVPN equips you with enhanced privacy and control over your data. By leveraging Docker, you can quickly deploy and manage your VPN service efficiently. Follow all security best practices, keep your software updated, and enjoy a secure browsing experience. Whether utilizing WireGuard for its simplicity or OpenVPN for its extensive configuration options, your self-hosted VPN will bolster your online privacy.
 
-Self-hosting a VPN can be a rewarding experience, offering insight into networking technologies while enhancing your online security landscape. Enjoy safe browsing!
+This tutorial covers the robust setup of self-hosted VPN solutions, leveraging powerful tools such as Docker and Cloudflare. Owning your VPN never was so accessible and powerful; embark on this journey and safeguard your digital footprints now.

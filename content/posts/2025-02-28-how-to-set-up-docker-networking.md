@@ -6,10 +6,6 @@ categories: ["DevOps"]
 draft: false
 ---
 
----
-title: "How to Set Up Docker Networking for Scalable Applications"
-tags: ["Docker", "Networking", "Scalable Applications", "Containers"]
----
 
 ## Introduction
 

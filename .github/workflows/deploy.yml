@@ -1,11 +1,11 @@
-name: Auto Generate & Deploy Blog Post
+#name: Auto Generate & Deploy Blog Post
 
-on:
-  schedule:
-    - cron: "0 * * * *"  # Rulează zilnic la ora 08:00 UTC
-  workflow_dispatch:  # Permite și rulare manuală din GitHub Actions
-  push:
-    branches:
+#on:
+#  schedule:
+#    - cron: "0 * * * *"  # Rulează zilnic la ora 08:00 UTC
+#  workflow_dispatch:  # Permite și rulare manuală din GitHub Actions
+#  push:
+#    branches:
       - main  # Rulează workflow-ul automat când faci push pe main
 
 permissions:

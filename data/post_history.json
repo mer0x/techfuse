@@ -23,6 +23,14 @@
       "topic": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
       "source": "Hacker News",
       "file_path": "content/posts/how-to-transform-your-esp32-into-a-dns-sinkhole-and-combat-doomscrolling.md"
+    },
+    {
+      "title": "Mastering BPB-Worker-Panel: The Ultimate Guide to Advanced Proxy Management",
+      "slug": "mastering-bpb-worker-panel-the-ultimate-guide-to-advanced-proxy-management",
+      "date": "2025-03-03",
+      "topic": "Exploring BPB-Worker-Panel: A GUI Panel providing Worker subscriptions for VLESS, Trojan and Warp configs alongside chain proxies, offering full DNS, clean IP,  Fragment, Warp, Warp pro and routing settings for cross-platform clients using Sing-box, Clash/Mihomo and Xray cores.",
+      "source": "GitHub Trending",
+      "file_path": "content/posts/mastering-bpb-worker-panel-the-ultimate-guide-to-advanced-proxy-management.md"
     }
   ]
 }

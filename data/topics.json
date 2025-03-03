@@ -1,10 +1,40 @@
 {
-  "timestamp": "2025-03-03T13:23:57.447595",
+  "timestamp": "2025-03-03T13:26:45.792748",
   "topics": [
     {
-      "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
+      "title": "Exploring ebook2audiobook: Convert ebooks to audiobooks with chapters and metadata using dynamic AI models and voice cloning. Supports 1,107+ languages!",
+      "source": "GitHub Trending",
+      "url": "https://github.com/DrewThomasson/ebook2audiobook"
+    },
+    {
+      "title": "SSH tips and tricks for remote management",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "GitHub Actions for automated testing",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "API design note: Beware of adding an \"Other\" enum value",
       "source": "Hacker News",
-      "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
+      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
+    },
+    {
+      "title": "Matt's Script Archive (1995)",
+      "source": "Hacker News",
+      "url": "https://www.scriptarchive.com/"
+    },
+    {
+      "title": "Alibaba Launches C930 RISC-V Chip Amid Shift from Western Tech",
+      "source": "Hacker News",
+      "url": "https://www.hpcwire.com/2025/02/28/alibaba-launches-c930-risc-v-chip-amid-shift-from-western-tech/"
+    },
+    {
+      "title": "Exploring BPB-Worker-Panel: A GUI Panel providing Worker subscriptions for VLESS, Trojan and Warp configs alongside chain proxies, offering full DNS, clean IP,  Fragment, Warp, Warp pro and routing settings for cross-platform clients using Sing-box, Clash/Mihomo and Xray cores.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/bia-pain-bache/BPB-Worker-Panel"
     },
     {
       "title": "Docker Compose for local development",
@@ -12,44 +42,14 @@
       "url": null
     },
     {
-      "title": "Exploring shipfast: The best free SaaS base for GenAI, LLM, and other AI Services.  Ship your next Generative AI startups in days.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/vietanhdev/shipfast"
-    },
-    {
-      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
-      "source": "Hacker News",
-      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
-    },
-    {
-      "title": "Setting up a home NAS with Linux",
+      "title": "Docker containers for beginners",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Automating backups for home servers",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Raspberry Pi Pico audio player",
+      "title": "Hallucinations in code are the least dangerous form of LLM mistakes",
       "source": "Hacker News",
-      "url": "http://lucstechblog.blogspot.com/2025/02/raspberry-pi-pico-audio-player.html"
-    },
-    {
-      "title": "Migrating from Windows to Linux",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "The Pentium contains a complicated circuit to multiply by three",
-      "source": "Hacker News",
-      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
-    },
-    {
-      "title": "Exploring LLM-Engineers-Handbook: The LLM's practical guide: From the fundamentals to deploying advanced LLM and RAG apps to AWS using LLMOps best practices",
-      "source": "GitHub Trending",
-      "url": "https://github.com/PacktPublishing/LLM-Engineers-Handbook"
+      "url": "https://simonwillison.net/2025/Mar/2/hallucinations-in-code/"
     }
   ]
 }

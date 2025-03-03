@@ -155,117 +155,7 @@ class ELI5TopicFetcher:
                     # Convert to question format for ELI5
                     if title and not self.non_english_pattern.search(title):
                         # Get just the main subject of the headline
-                        simplified = re.sub(r', study (suggests|finds|shows|reveals|reports).*
-    
-    def get_wikipedia_featured(self, count=2):
-        """Fetch featured articles from Wikipedia and convert to ELI5 topics"""
-        topics = []
-        
-        try:
-            # Get Wikipedia's featured article
-            response = requests.get("https://en.wikipedia.org/wiki/Special:RandomInCategory/Featured_articles")
-            if response.status_code == 200:
-                # Extract the title from the HTML
-                title_match = re.search(r'<title>(.*?) - Wikipedia</title>', response.text)
-                
-                if title_match:
-                    article_title = title_match.group(1).strip()
-                    
-                    # Skip items with non-English characters
-                    if not self.non_english_pattern.search(article_title):
-                        # Create ELI5 questions based on the article title
-                        question_formats = [
-                            f"What is {article_title} and why is it important?",
-                            f"How would you explain {article_title} to a child?",
-                            f"Why should I know about {article_title}?",
-                            f"What's the simplest explanation of {article_title}?"
-                        ]
-                        
-                        # Get the current URL after redirection
-                        article_url = response.url
-                        
-                        for i in range(min(count, len(question_formats))):
-                            topics.append({
-                                'title': question_formats[i],
-                                'source': 'Wikipedia Featured',
-                                'url': article_url
-                            })
-                
-                return topics[:count]
-                
-        except Exception as e:
-            print(f"Error fetching Wikipedia topics: {e}")
-            
-        # Always return a list, even if empty
-        return topics
-    
-    def get_topics(self, count=10):
-        """Combine topics from all sources"""
-        all_topics = []
-        
-        # Get topics from different sources
-        all_topics.extend(self.get_reddit_topics(count=6))
-        all_topics.extend(self.get_science_daily_topics(count=3))
-        all_topics.extend(self.get_wikipedia_featured(count=2))
-        
-        # If we didn't get enough topics, add some from backup list
-        if len(all_topics) < count:
-            # Shuffle backup topics
-            random.shuffle(self.backup_topics)
-            # Add backup topics as needed
-            for topic in self.backup_topics[:count-len(all_topics)]:
-                all_topics.append({
-                    'title': topic,
-                    'source': 'Curated Topic',
-                    'url': None
-                })
-        
-        # Shuffle all topics
-        random.shuffle(all_topics)
-        
-        # Final filtering to ensure all topics are valid
-        filtered_topics = [topic for topic in all_topics if self.is_valid_eli5_topic(topic['title'])]
-        
-        # If still not enough topics after filtering, add more backup topics
-        if len(filtered_topics) < count:
-            remaining_backup = [t for t in self.backup_topics if not any(t == topic['title'] for topic in filtered_topics)]
-            random.shuffle(remaining_backup)
-            for topic in remaining_backup[:count-len(filtered_topics)]:
-                filtered_topics.append({
-                    'title': topic,
-                    'source': 'Curated Topic',
-                    'url': None
-                })
-        
-        # Return limited number of topics
-        return filtered_topics[:count]
-    
-    def save_topics(self, filepath='topics.json'):
-        """Save fetched topics to a JSON file"""
-        topics = self.get_topics()
-        
-        # Add timestamp
-        data = {
-            'timestamp': datetime.now().isoformat(),
-            'topics': topics
-        }
-        
-        # Create directory if it doesn't exist
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)
-        
-        # Save to file
-        with open(filepath, 'w') as f:
-            json.dump(data, f, indent=2)
-        
-        return topics
-
-if __name__ == "__main__":
-    fetcher = ELI5TopicFetcher()
-    topics = fetcher.save_topics('data/topics.json')
-    print(f"Fetched {len(topics)} topics and saved to data/topics.json")
-    for i, topic in enumerate(topics):
-        print(f"{i+1}. {topic['title']} (from {topic['source']})")
-, '', title)
+                        simplified = re.sub(r', study (suggests|finds|shows|reveals|reports).*$', '', title)
                         simplified = re.sub(r'\s*\(.*?\)\s*', ' ', simplified)
                         
                         # Convert to question format
@@ -335,7 +225,9 @@ if __name__ == "__main__":
                 
         except Exception as e:
             print(f"Error fetching Wikipedia topics: {e}")
-            return []
+            
+        # Always return a list, even if empty
+        return topics
     
     def get_topics(self, count=10):
         """Combine topics from all sources"""

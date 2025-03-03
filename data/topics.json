@@ -1,15 +1,35 @@
 {
-  "timestamp": "2025-03-03T12:53:02.326624",
+  "timestamp": "2025-03-03T12:59:57.205535",
   "topics": [
     {
-      "title": "Self-hosting your own password manager",
+      "title": "Speedrunners are vulnerability researchers, they just don't know it yet",
+      "source": "Hacker News",
+      "url": "https://zetier.com/speedrunners-are-vulnerability-researchers/"
+    },
+    {
+      "title": "Hallucinations in code are the least dangerous form of LLM mistakes",
+      "source": "Hacker News",
+      "url": "https://simonwillison.net/2025/Mar/2/hallucinations-in-code/"
+    },
+    {
+      "title": "Setting up a home NAS with Linux",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Cloud storage alternatives for privacy",
-      "source": "Curated Topic",
-      "url": null
+      "title": "Why do we have both CSRF protection and CORS?",
+      "source": "Hacker News",
+      "url": "https://smagin.fyi/posts/cross-site-requests/"
+    },
+    {
+      "title": "Exploring lkwebserver: Little Kitten Webserver",
+      "source": "GitHub Trending",
+      "url": "https://github.com/robdelacruz/lkwebserver"
+    },
+    {
+      "title": "Exploring global_bot_app: Global Bot App Untuk menjalankan bot di berbagai platform",
+      "source": "GitHub Trending",
+      "url": "https://github.com/globalcorporation/global_bot_app"
     },
     {
       "title": "Home network security best practices",
@@ -17,39 +37,19 @@
       "url": null
     },
     {
-      "title": "CI/CD pipelines for hobbyist projects",
+      "title": "Docker Compose for local development",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Setting up a smart home hub",
+      "title": "Setting up a reverse proxy with Nginx",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Made a scroll bar buddy that walks down the page when you scroll",
-      "source": "Hacker News",
-      "url": "https://focusfurnace.com/scroll_buddy.html"
-    },
-    {
-      "title": "Exploring rollapp-registry: A registry for RollApps",
-      "source": "GitHub Trending",
-      "url": "https://github.com/dymensionxyz/rollapp-registry"
-    },
-    {
-      "title": "Robust Wavefront OBJ model parsing in C",
-      "source": "Hacker News",
-      "url": "https://nullprogram.com/blog/2025/03/02/"
-    },
-    {
-      "title": "Speedrunners are vulnerability researchers, they just don't know it yet",
-      "source": "Hacker News",
-      "url": "https://zetier.com/speedrunners-are-vulnerability-researchers/"
-    },
-    {
-      "title": "Exploring 2024-New-Grad-Tech-Jobs: Collection of 2024 tech job opportunities for new grads!",
-      "source": "GitHub Trending",
-      "url": "https://github.com/SimplifyJobs/2024-New-Grad-Tech-Jobs"
+      "title": "Linux server monitoring tools",
+      "source": "Curated Topic",
+      "url": null
     }
   ]
 }

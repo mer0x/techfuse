@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-03-03T14:01:21.801395",
+  "timestamp": "2025-03-03T14:15:34.794466",
   "topics": [
     {
-      "title": "Exploring go-backend-clean-architecture: A Go (Golang) Backend Clean Architecture project with Gin, MongoDB, JWT Authentication Middleware, Test, and Docker.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/amitshekhariitbhu/go-backend-clean-architecture"
+      "title": "We in-housed our data labelling",
+      "source": "Hacker News",
+      "url": "https://www.ericbutton.co/p/data-labelling"
     },
     {
-      "title": "Setting up a VPN at home",
-      "source": "Curated Topic",
-      "url": null
+      "title": "The Pentium contains a complicated circuit to multiply by three",
+      "source": "Hacker News",
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
     },
     {
-      "title": "Self-hosting your own password manager",
+      "title": "Linux command line productivity tips",
       "source": "Curated Topic",
       "url": null
     },
@@ -22,34 +22,34 @@
       "url": "https://initialcommit.com/blog/im-making-a-git-game"
     },
     {
-      "title": "Exploring devpod: Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/loft-sh/devpod"
-    },
-    {
-      "title": "Geothermal power is a climate moon shot beneath our feet",
-      "source": "Hacker News",
-      "url": "https://www.newyorker.com/news/the-lede/geothermal-power-is-a-climate-moon-shot-beneath-our-feet"
-    },
-    {
-      "title": "We in-housed our data labelling",
-      "source": "Hacker News",
-      "url": "https://www.ericbutton.co/p/data-labelling"
-    },
-    {
       "title": "CI/CD pipelines for hobbyist projects",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "GitHub Actions for automated testing",
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
+      "source": "Hacker News",
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
+    },
+    {
+      "title": "Exploring browser-use: Make websites accessible for AI agents",
+      "source": "GitHub Trending",
+      "url": "https://github.com/browser-use/browser-use"
+    },
+    {
+      "title": "Migrating from Windows to Linux",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "API design note: Beware of adding an \"Other\" enum value",
-      "source": "Hacker News",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
+      "title": "Home network security best practices",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Exploring open-interpreter: A natural language interface for computers",
+      "source": "GitHub Trending",
+      "url": "https://github.com/OpenInterpreter/open-interpreter"
     }
   ]
 }

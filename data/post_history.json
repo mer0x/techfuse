@@ -95,6 +95,14 @@
       "topic": "Self-hosting your own password manager",
       "source": "Curated Topic",
       "file_path": "content/posts/how-to-self-host-your-own-password-manager-a-step-by-step-guide.md"
+    },
+    {
+      "title": "Making Websites More Accessible for AI Agents: A Comprehensive Guide",
+      "slug": "making-websites-more-accessible-for-ai-agents-a-comprehensive-guide",
+      "date": "2025-03-03",
+      "topic": "Exploring browser-use: Make websites accessible for AI agents",
+      "source": "GitHub Trending",
+      "file_path": "content/posts/making-websites-more-accessible-for-ai-agents-a-comprehensive-guide.md"
     }
   ]
 }

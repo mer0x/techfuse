@@ -135,6 +135,14 @@
       "topic": "Exploring Jenkins-Zero-To-Hero: Install Jenkins, configure Docker as slave, set up cicd, deploy applications to k8s using Argo CD in GitOps way.",
       "source": "GitHub Trending",
       "file_path": "content/posts/jenkins-zero-to-hero-build-a-complete-cicd-pipeline-with-jenkins-docker-kubernetes-and-argo-cd.md"
+    },
+    {
+      "title": "Managing Docker Volumes Effectively: A Practical Guide",
+      "slug": "managing-docker-volumes-effectively-a-practical-guide",
+      "date": "2025-03-03",
+      "topic": "Managing Docker volumes effectively",
+      "source": "Curated Topic",
+      "file_path": "content/posts/managing-docker-volumes-effectively-a-practical-guide.md"
     }
   ]
 }

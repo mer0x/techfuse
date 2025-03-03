@@ -1,25 +1,25 @@
 {
-  "timestamp": "2025-03-03T15:04:18.949512",
+  "timestamp": "2025-03-03T15:09:33.624211",
   "topics": [
     {
-      "title": "Linux command line productivity tips",
+      "title": "Setting up a reverse proxy with Nginx",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Exploring dockerc: container image to single executable compiler",
-      "source": "GitHub Trending",
-      "url": "https://github.com/NilsIrl/dockerc"
-    },
-    {
-      "title": "Gooey rubber that's slowly ruining old hard drives",
+      "title": "The Internals of PostgreSQL",
       "source": "Hacker News",
-      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
+      "url": "http://www.interdb.jp/pg/index.html"
     },
     {
-      "title": "Kubernetes cluster on Raspberry Pi",
-      "source": "Curated Topic",
-      "url": null
+      "title": "Exploring top-javascript-interview-questions: 200 important JavaScript interview questions for busy Front End Engineers (updated for 2025)",
+      "source": "GitHub Trending",
+      "url": "https://github.com/yangshun/top-javascript-interview-questions"
+    },
+    {
+      "title": "Exploring Mastering-GitHub-Copilot-for-Paired-Programming: A 10-Lesson course teaching everything you need to know about harnessing GitHub Copilot as an AI Paired Programming resource.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming"
     },
     {
       "title": "The Pentium contains a complicated circuit to multiply by three",
@@ -27,27 +27,27 @@
       "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
     },
     {
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
+      "source": "Hacker News",
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
+    },
+    {
+      "title": "Managing Docker volumes effectively",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
       "title": "I struggled with Git, so I'm making a game to spare others the pain",
       "source": "Hacker News",
       "url": "https://initialcommit.com/blog/im-making-a-git-game"
     },
     {
-      "title": "Setting up a VPN at home",
+      "title": "Docker containers for beginners",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Exploring Jenkins-Zero-To-Hero: Install Jenkins, configure Docker as slave, set up cicd, deploy applications to k8s using Argo CD in GitOps way.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero"
-    },
-    {
-      "title": "API design note: Beware of adding an \"Other\" enum value",
-      "source": "Hacker News",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
-    },
-    {
-      "title": "SSH tips and tricks for remote management",
+      "title": "Cloud storage alternatives for privacy",
       "source": "Curated Topic",
       "url": null
     }

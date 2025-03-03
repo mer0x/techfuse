@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-03-03T12:28:14.979184",
+  "topics": [
+    {
+      "title": "Blender-made movie Flow takes Oscar",
+      "source": "Hacker News",
+      "url": "https://www.reuters.com/lifestyle/flow-wins-best-animated-feature-film-oscar-2025-03-03/"
+    },
+    {
+      "title": "Exploring axlearn: An Extensible Deep Learning Library",
+      "source": "GitHub Trending",
+      "url": "https://github.com/apple/axlearn"
+    },
+    {
+      "title": "Docker containers for beginners",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Migrating from Windows to Linux",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Managing Docker volumes effectively",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Exploring FindTheChatGPTer: ChatGPT\u7206\u706b\uff0c\u5f00\u542f\u4e86\u901a\u5f80AGI\u7684\u5173\u952e\u4e00\u6b65\uff0c\u672c\u9879\u76ee\u65e8\u5728\u6c47\u603b\u90a3\u4e9bChatGPT\u7684\u5f00\u6e90\u5e73\u66ff\u4eec\uff0c\u5305\u62ec\u6587\u672c\u5927\u6a21\u578b\u3001\u591a\u6a21\u6001\u5927\u6a21\u578b\u7b49\uff0c\u4e3a\u5927\u5bb6\u63d0\u4f9b\u4e00\u4e9b\u4fbf\u5229",
+      "source": "GitHub Trending",
+      "url": "https://github.com/chenking2020/FindTheChatGPTer"
+    },
+    {
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
+      "source": "Hacker News",
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
+    },
+    {
+      "title": "CI/CD pipelines for hobbyist projects",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "The Pentium contains a complicated circuit to multiply by three",
+      "source": "Hacker News",
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
+    },
+    {
+      "title": "Setting up a reverse proxy with Nginx",
+      "source": "Curated Topic",
+      "url": null
+    }
+  ]
+}

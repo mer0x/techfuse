@@ -1,18 +1,23 @@
 {
-  "timestamp": "2025-03-03T13:14:19.025066",
+  "timestamp": "2025-03-03T13:16:57.314432",
   "topics": [
     {
-      "title": "Show HN: Tangled \u2013 Git collaboration platform built on atproto",
-      "source": "Hacker News",
-      "url": "https://blog.tangled.sh/intro"
+      "title": "Setting up a VPN at home",
+      "source": "Curated Topic",
+      "url": null
     },
     {
-      "title": "Exploring xiaoheihe-literature: \u9ed1\u76d2\u5723\u7ecf&\u76ae\u7279\u5f39\u5e55",
+      "title": "Exploring Tune-A-Video: Unofficial implementation of Tune-A-Video",
       "source": "GitHub Trending",
-      "url": "https://github.com/heygsc/xiaoheihe-literature"
+      "url": "https://github.com/bryandlee/Tune-A-Video"
     },
     {
-      "title": "CI/CD pipelines for hobbyist projects",
+      "title": "Linux server monitoring tools",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Setting up a reverse proxy with Nginx",
       "source": "Curated Topic",
       "url": null
     },
@@ -22,34 +27,29 @@
       "url": "http://socmus.com/en/"
     },
     {
-      "title": "Exploring DotNetIsolator: A library for running isolated .NET runtimes inside .NET",
-      "source": "GitHub Trending",
-      "url": "https://github.com/SteveSandersonMS/DotNetIsolator"
-    },
-    {
-      "title": "Setting up a reverse proxy with Nginx",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Managing Docker volumes effectively",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Windows power user tricks",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Phlex for Rails Emails: Action Mailer Without ERB",
+      "title": "Harvest the sun twice: Agrivoltaics promises sustainable food, energy and water",
       "source": "Hacker News",
-      "url": "https://camillovisini.com/coding/phlex-for-rails-emails-action-mailer-without-erb"
+      "url": "https://www.sheffield.ac.uk/news/harvesting-sun-twice-agrivoltaics-shows-promise-sustainable-food-energy-and-water-management-east"
     },
     {
-      "title": "SSH tips and tricks for remote management",
+      "title": "Building a home media server",
       "source": "Curated Topic",
       "url": null
+    },
+    {
+      "title": "Exploring PHP: Explore something new",
+      "source": "GitHub Trending",
+      "url": "https://github.com/sksalahuddin2828/PHP"
+    },
+    {
+      "title": "Docker Compose for local development",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Hallucinations in code are the least dangerous form of LLM mistakes",
+      "source": "Hacker News",
+      "url": "https://simonwillison.net/2025/Mar/2/hallucinations-in-code/"
     }
   ]
 }

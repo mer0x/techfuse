@@ -5,7 +5,7 @@ import re
 import random
 import time
 from datetime import datetime
-import openai
+from openai import OpenAI
 import yaml
 import argparse
 import glob
@@ -17,13 +17,20 @@ class PostGenerator:
         if not self.api_key:
             raise ValueError("OpenAI API key is required. Set OPENAI_API_KEY environment variable or pass it as argument.")
         
-        openai.api_key = self.api_key
+        # Initialize OpenAI client
+        self.client = OpenAI(api_key=self.api_key)
         
         # Set up paths
         self.content_dir = "content/posts"
         self.data_dir = "data"
         self.topics_file = os.path.join(self.data_dir, "topics.json")
         self.history_file = os.path.join(self.data_dir, "post_history.json")
+        
+        # Debug information
+        print(f"Current working directory: {os.getcwd()}")
+        print(f"Topics file path: {self.topics_file}")
+        print(f"Topics file exists: {os.path.exists(self.topics_file)}")
+        print(f"Content directory exists: {os.path.exists(self.content_dir)}")
         
         # Create directories if they don't exist
         os.makedirs(self.content_dir, exist_ok=True)
@@ -58,7 +65,10 @@ class PostGenerator:
                 except json.JSONDecodeError:
                     print(f"Error: Could not parse {self.topics_file}.")
                     return []
-        return []
+        else:
+            print(f"Topics file not found at {self.topics_file}")
+            print(f"Directory contents of {self.data_dir}: {os.listdir(self.data_dir) if os.path.exists(self.data_dir) else 'directory does not exist'}")
+            return []
     
     def _slugify(self, title):
         """Convert title to URL-friendly slug"""
@@ -130,8 +140,9 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
 """
         
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4-turbo",
+            # Using the new OpenAI API format
+            response = self.client.chat.completions.create(
+                model="gpt-4-turbo-preview",  # Updated model name
                 messages=[
                     {"role": "system", "content": "You are an expert technical writer who creates clear, concise, and accurate blog posts about IT topics."},
                     {"role": "user", "content": prompt}
@@ -150,8 +161,9 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
                 # If duplicate, try to generate a new title
                 title_prompt = f"The title '{title}' has already been used. Please generate a new, unique title for this blog post about {topic['title']} that is different but still SEO-friendly."
                 
-                title_response = openai.ChatCompletion.create(
-                    model="gpt-4-turbo",
+                # Using the new OpenAI API format
+                title_response = self.client.chat.completions.create(
+                    model="gpt-4-turbo-preview",  # Updated model name
                     messages=[
                         {"role": "system", "content": "You are an expert at creating SEO-friendly, unique blog post titles."},
                         {"role": "user", "content": title_prompt}
@@ -260,6 +272,8 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
             
             # Generate file path
             file_path = os.path.join(self.content_dir, f"{slug}.md")
+            
+            print(f"Writing post to {file_path}")
             
             # Write to file
             with open(file_path, 'w') as f:

@@ -1,30 +1,10 @@
 {
-  "timestamp": "2025-03-03T13:32:35.229167",
+  "timestamp": "2025-03-03T13:37:45.861845",
   "topics": [
     {
-      "title": "Exploring ChatChat: Chat Chat, your own unified chat and search to AI platform, with a simple and easy to use interface.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/okisdev/ChatChat"
-    },
-    {
-      "title": "Matt's Script Archive (1995)",
-      "source": "Hacker News",
-      "url": "https://www.scriptarchive.com/"
-    },
-    {
-      "title": "Alibaba Launches C930 RISC-V Chip Amid Shift from Western Tech",
-      "source": "Hacker News",
-      "url": "https://www.hpcwire.com/2025/02/28/alibaba-launches-c930-risc-v-chip-amid-shift-from-western-tech/"
-    },
-    {
-      "title": "Exploring learn-generative-ai: Learn Cloud Applied Generative AI Engineering (GenEng) using OpenAI, Gemini, Streamlit, Containers, Serverless, Postgres, LangChain, Pinecone, and Next.js",
-      "source": "GitHub Trending",
-      "url": "https://github.com/panaverse/learn-generative-ai"
-    },
-    {
-      "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
-      "source": "Hacker News",
-      "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
+      "title": "Migrating from Windows to Linux",
+      "source": "Curated Topic",
+      "url": null
     },
     {
       "title": "I struggled with Git, so I'm making a game to spare others the pain",
@@ -32,24 +12,44 @@
       "url": "https://initialcommit.com/blog/im-making-a-git-game"
     },
     {
-      "title": "Managing Docker volumes effectively",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
       "title": "Docker Compose for local development",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "CI/CD pipelines for hobbyist projects",
+      "title": "Exploring browser-use: Make websites accessible for AI agents",
+      "source": "GitHub Trending",
+      "url": "https://github.com/browser-use/browser-use"
+    },
+    {
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
+      "source": "Hacker News",
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
+    },
+    {
+      "title": "Exploring DocsGPT: Chatbot for documentation, that allows you to chat with your data. Privately deployable, provides AI knowledge sharing and integrates knowledge into your AI workflow",
+      "source": "GitHub Trending",
+      "url": "https://github.com/arc53/DocsGPT"
+    },
+    {
+      "title": "SSH tips and tricks for remote management",
       "source": "Curated Topic",
       "url": null
+    },
+    {
+      "title": "The Pentium contains a complicated circuit to multiply by three",
+      "source": "Hacker News",
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
     },
     {
       "title": "Setting up a reverse proxy with Nginx",
       "source": "Curated Topic",
       "url": null
+    },
+    {
+      "title": "We in-housed our data labelling",
+      "source": "Hacker News",
+      "url": "https://www.ericbutton.co/p/data-labelling"
     }
   ]
 }

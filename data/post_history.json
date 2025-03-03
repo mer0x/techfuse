@@ -47,6 +47,14 @@
       "topic": "Exploring ChatChat: Chat Chat, your own unified chat and search to AI platform, with a simple and easy to use interface.",
       "source": "GitHub Trending",
       "file_path": "content/posts/dive-into-chatchat-your-unified-chat-and-ai-search-platform.md"
+    },
+    {
+      "title": "Learning Git Through Gaming: A Revolutionary Approach to Mastering Version Control",
+      "slug": "learning-git-through-gaming-a-revolutionary-approach-to-mastering-version-control",
+      "date": "2025-03-03",
+      "topic": "I struggled with Git, so I'm making a game to spare others the pain",
+      "source": "Hacker News",
+      "file_path": "content/posts/learning-git-through-gaming-a-revolutionary-approach-to-mastering-version-control.md"
     }
   ]
 }

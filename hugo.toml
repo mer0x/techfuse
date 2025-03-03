@@ -34,6 +34,7 @@ enableEmoji = true
   defaultTheme = "auto"
 
   # Display settings
+  disableSpecial1stPost = true
   ShowFeatured = false
   ShowReadingTime = true
   ShowShareButtons = true

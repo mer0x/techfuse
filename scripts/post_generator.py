@@ -152,7 +152,7 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
         try:
             # Using the new OpenAI API format
             response = self.client.chat.completions.create(
-                model="gpt-4-turbo-preview",  # Updated model name
+                model="gpt-4.5-preview",  # Updated model name
                 messages=[
                     {"role": "system", "content": "You are an expert technical writer who creates clear, concise, and accurate blog posts about IT topics."},
                     {"role": "user", "content": prompt}
@@ -173,7 +173,7 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
                 
                 # Using the new OpenAI API format
                 title_response = self.client.chat.completions.create(
-                    model="gpt-4-turbo-preview",  # Updated model name
+                    model="gpt-4.5-preview",  # Updated model name
                     messages=[
                         {"role": "system", "content": "You are an expert at creating SEO-friendly, unique blog post titles."},
                         {"role": "user", "content": title_prompt}

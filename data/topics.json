@@ -1,55 +1,55 @@
 {
-  "timestamp": "2025-03-03T13:19:37.469492",
+  "timestamp": "2025-03-03T13:22:27.295637",
   "topics": [
+    {
+      "title": "Setting up a home NAS with Linux",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "SSH tips and tricks for remote management",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "API design note: Beware of adding an \"Other\" enum value",
+      "source": "Hacker News",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
+    },
+    {
+      "title": "Exploring xpipe: Your entire server infrastructure at your fingertips",
+      "source": "GitHub Trending",
+      "url": "https://github.com/xpipe-io/xpipe"
+    },
     {
       "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
       "source": "Hacker News",
       "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
     },
     {
-      "title": "Linux server monitoring tools",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Automating backups for home servers",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "I struggled with Git, so I'm making a game to spare others the pain",
+      "title": "Show HN: Prompting LLMs in Bash scripts",
       "source": "Hacker News",
-      "url": "https://initialcommit.com/blog/im-making-a-git-game"
+      "url": "https://elijahpotter.dev/articles/prompting_large_language_models_in_bash_scripts"
     },
     {
-      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
-      "source": "Hacker News",
-      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
-    },
-    {
-      "title": "Windows power user tricks",
+      "title": "Docker Compose for local development",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Exploring uv: An extremely fast Python package and project manager, written in Rust.",
+      "title": "Exploring windows: Windows inside a Docker container.",
       "source": "GitHub Trending",
-      "url": "https://github.com/astral-sh/uv"
+      "url": "https://github.com/dockur/windows"
     },
     {
-      "title": "Migrating from Windows to Linux",
+      "title": "Gooey rubber that's slowly ruining old hard drives",
+      "source": "Hacker News",
+      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
+    },
+    {
+      "title": "Setting up a VPN at home",
       "source": "Curated Topic",
       "url": null
-    },
-    {
-      "title": "Exploring RAG_Techniques: This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. RAG systems combine information retrieval with generative models to provide accurate and contextually rich responses.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/NirDiamant/RAG_Techniques"
-    },
-    {
-      "title": "The Pentium contains a complicated circuit to multiply by three",
-      "source": "Hacker News",
-      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
     }
   ]
 }

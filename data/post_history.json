@@ -7,6 +7,14 @@
       "topic": "Man's brain turned to glass by hot Vesuvius ash cloud",
       "source": "Hacker News",
       "file_path": "content/posts/unveiling-the-past-how-vesuvius-turned-a-mans-brain-to-glass.md"
+    },
+    {
+      "title": "Mastering Docker Compose for Local Development",
+      "slug": "mastering-docker-compose-for-local-development",
+      "date": "2025-03-03",
+      "topic": "Docker Compose for local development",
+      "source": "Curated Topic",
+      "file_path": "content/posts/mastering-docker-compose-for-local-development.md"
     }
   ]
 }

@@ -1,15 +1,25 @@
 {
-  "timestamp": "2025-03-03T13:48:27.569471",
+  "timestamp": "2025-03-03T13:52:00.518866",
   "topics": [
     {
-      "title": "Windows power user tricks",
+      "title": "Cloud storage alternatives for privacy",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Geothermal power is a climate moon shot beneath our feet",
+      "title": "Exploring nofwl: NoFWL Desktop Application",
+      "source": "GitHub Trending",
+      "url": "https://github.com/lencx/nofwl"
+    },
+    {
+      "title": "I struggled with Git, so I'm making a game to spare others the pain",
       "source": "Hacker News",
-      "url": "https://www.newyorker.com/news/the-lede/geothermal-power-is-a-climate-moon-shot-beneath-our-feet"
+      "url": "https://initialcommit.com/blog/im-making-a-git-game"
+    },
+    {
+      "title": "Kubernetes cluster on Raspberry Pi",
+      "source": "Curated Topic",
+      "url": null
     },
     {
       "title": "Docker containers for beginners",
@@ -17,9 +27,9 @@
       "url": null
     },
     {
-      "title": "Exploring BPB-Worker-Panel: A GUI Panel providing Worker subscriptions for VLESS, Trojan and Warp configs alongside chain proxies, offering full DNS, clean IP,  Fragment, Warp, Warp pro and routing settings for cross-platform clients using Sing-box, Clash/Mihomo and Xray cores.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/bia-pain-bache/BPB-Worker-Panel"
+      "title": "Alibaba Launches C930 RISC-V Chip Amid Shift from Western Tech",
+      "source": "Hacker News",
+      "url": "https://www.hpcwire.com/2025/02/28/alibaba-launches-c930-risc-v-chip-amid-shift-from-western-tech/"
     },
     {
       "title": "AWS Cat Qubits Make Quantum Error Correction Effective, Affordable",
@@ -27,29 +37,19 @@
       "url": "https://www.nextplatform.com/2025/02/27/aws-cat-qubits-make-quantum-error-correction-effective-affordable/"
     },
     {
-      "title": "Exploring BingGPT: Desktop application of new Bing's AI-powered chat (Windows, macOS and Linux)",
+      "title": "Exploring SpotX-Bash: SpotX Mac and Linux adblocker for the Spotify desktop client, in Bash",
       "source": "GitHub Trending",
-      "url": "https://github.com/dice2o/BingGPT"
+      "url": "https://github.com/SpotX-Official/SpotX-Bash"
     },
     {
-      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
-      "source": "Hacker News",
-      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
-    },
-    {
-      "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
-      "source": "Hacker News",
-      "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
-    },
-    {
-      "title": "Home network security best practices",
+      "title": "Migrating from Windows to Linux",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "SSH tips and tricks for remote management",
-      "source": "Curated Topic",
-      "url": null
+      "title": "Show HN: Prompting LLMs in Bash scripts",
+      "source": "Hacker News",
+      "url": "https://elijahpotter.dev/articles/prompting_large_language_models_in_bash_scripts"
     }
   ]
 }

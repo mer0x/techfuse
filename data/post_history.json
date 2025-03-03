@@ -71,6 +71,14 @@
       "topic": "SSH tips and tricks for remote management",
       "source": "Curated Topic",
       "file_path": "content/posts/mastering-ssh-tips-and-tricks-for-efficient-remote-management.md"
+    },
+    {
+      "title": "Turn Git Struggles Into Fun: Learn With a New Game",
+      "slug": "turn-git-struggles-into-fun-learn-with-a-new-game",
+      "date": "2025-03-03",
+      "topic": "I struggled with Git, so I'm making a game to spare others the pain",
+      "source": "Hacker News",
+      "file_path": "content/posts/turn-git-struggles-into-fun-learn-with-a-new-game.md"
     }
   ]
 }

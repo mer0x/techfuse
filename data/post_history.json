@@ -39,6 +39,14 @@
       "topic": "Matt's Script Archive (1995)",
       "source": "Hacker News",
       "file_path": "content/posts/revisiting-matts-script-archive-a-1995-internet-relic.md"
+    },
+    {
+      "title": "Dive into ChatChat: Your Unified Chat and AI Search Platform",
+      "slug": "dive-into-chatchat-your-unified-chat-and-ai-search-platform",
+      "date": "2025-03-03",
+      "topic": "Exploring ChatChat: Chat Chat, your own unified chat and search to AI platform, with a simple and easy to use interface.",
+      "source": "GitHub Trending",
+      "file_path": "content/posts/dive-into-chatchat-your-unified-chat-and-ai-search-platform.md"
     }
   ]
 }

@@ -127,6 +127,14 @@
       "topic": "Exploring Olares: Olares: An Open-Source Sovereign Cloud OS for Local AI",
       "source": "GitHub Trending",
       "file_path": "content/posts/exploring-olares-an-open-source-sovereign-cloud-os-for-local-ai.md"
+    },
+    {
+      "title": "Jenkins Zero-to-Hero: Build a Complete CI/CD Pipeline with Jenkins, Docker, Kubernetes, and Argo CD",
+      "slug": "jenkins-zero-to-hero-build-a-complete-cicd-pipeline-with-jenkins-docker-kubernetes-and-argo-cd",
+      "date": "2025-03-03",
+      "topic": "Exploring Jenkins-Zero-To-Hero: Install Jenkins, configure Docker as slave, set up cicd, deploy applications to k8s using Argo CD in GitOps way.",
+      "source": "GitHub Trending",
+      "file_path": "content/posts/jenkins-zero-to-hero-build-a-complete-cicd-pipeline-with-jenkins-docker-kubernetes-and-argo-cd.md"
     }
   ]
 }

@@ -1,20 +1,15 @@
 {
-  "timestamp": "2025-03-03T13:56:58.773878",
+  "timestamp": "2025-03-03T14:01:21.801395",
   "topics": [
     {
-      "title": "Kubernetes cluster on Raspberry Pi",
+      "title": "Exploring go-backend-clean-architecture: A Go (Golang) Backend Clean Architecture project with Gin, MongoDB, JWT Authentication Middleware, Test, and Docker.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/amitshekhariitbhu/go-backend-clean-architecture"
+    },
+    {
+      "title": "Setting up a VPN at home",
       "source": "Curated Topic",
       "url": null
-    },
-    {
-      "title": "API design note: Beware of adding an \"Other\" enum value",
-      "source": "Hacker News",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
-    },
-    {
-      "title": "Matt's Script Archive (1995)",
-      "source": "Hacker News",
-      "url": "https://www.scriptarchive.com/"
     },
     {
       "title": "Self-hosting your own password manager",
@@ -22,9 +17,14 @@
       "url": null
     },
     {
-      "title": "Exploring iptv-sources: Autoupdate iptv sources",
+      "title": "I struggled with Git, so I'm making a game to spare others the pain",
+      "source": "Hacker News",
+      "url": "https://initialcommit.com/blog/im-making-a-git-game"
+    },
+    {
+      "title": "Exploring devpod: Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.",
       "source": "GitHub Trending",
-      "url": "https://github.com/HerbertHe/iptv-sources"
+      "url": "https://github.com/loft-sh/devpod"
     },
     {
       "title": "Geothermal power is a climate moon shot beneath our feet",
@@ -32,19 +32,24 @@
       "url": "https://www.newyorker.com/news/the-lede/geothermal-power-is-a-climate-moon-shot-beneath-our-feet"
     },
     {
-      "title": "Exploring dockge: A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager",
-      "source": "GitHub Trending",
-      "url": "https://github.com/louislam/dockge"
-    },
-    {
-      "title": "Show HN: Prompting LLMs in Bash scripts",
+      "title": "We in-housed our data labelling",
       "source": "Hacker News",
-      "url": "https://elijahpotter.dev/articles/prompting_large_language_models_in_bash_scripts"
+      "url": "https://www.ericbutton.co/p/data-labelling"
     },
     {
-      "title": "Home network security best practices",
+      "title": "CI/CD pipelines for hobbyist projects",
       "source": "Curated Topic",
       "url": null
+    },
+    {
+      "title": "GitHub Actions for automated testing",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "API design note: Beware of adding an \"Other\" enum value",
+      "source": "Hacker News",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
     }
   ]
 }

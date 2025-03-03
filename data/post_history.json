@@ -167,6 +167,14 @@
       "topic": "Exploring shell_gpt: A command-line productivity tool powered by AI large language models like GPT-4, will help you accomplish your tasks faster and more efficiently.",
       "source": "GitHub Trending",
       "file_path": "content/posts/boost-your-command-line-productivity-with-shell-gpt-ai-powered-terminal-assistant-using-gpt-4.md"
+    },
+    {
+      "title": "How to Set Up a Simple CI/CD Pipeline for Your Hobbyist Project",
+      "slug": "how-to-set-up-a-simple-cicd-pipeline-for-your-hobbyist-project",
+      "date": "2025-03-03",
+      "topic": "CI/CD pipelines for hobbyist projects",
+      "source": "Curated Topic",
+      "file_path": "content/posts/how-to-set-up-a-simple-cicd-pipeline-for-your-hobbyist-project.md"
     }
   ]
 }

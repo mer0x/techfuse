@@ -1,23 +1,33 @@
 {
-  "timestamp": "2025-03-03T13:04:24.820880",
+  "timestamp": "2025-03-03T13:14:19.025066",
   "topics": [
     {
-      "title": "Linux command line productivity tips",
+      "title": "Show HN: Tangled \u2013 Git collaboration platform built on atproto",
+      "source": "Hacker News",
+      "url": "https://blog.tangled.sh/intro"
+    },
+    {
+      "title": "Exploring xiaoheihe-literature: \u9ed1\u76d2\u5723\u7ecf&\u76ae\u7279\u5f39\u5e55",
+      "source": "GitHub Trending",
+      "url": "https://github.com/heygsc/xiaoheihe-literature"
+    },
+    {
+      "title": "CI/CD pipelines for hobbyist projects",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Exploring gligen-gui: An intuitive GUI for GLIGEN that uses ComfyUI in the backend",
-      "source": "GitHub Trending",
-      "url": "https://github.com/mut-ex/gligen-gui"
-    },
-    {
-      "title": "Hallucinations in code are the least dangerous form of LLM mistakes",
+      "title": "Virtual museum of socialist era graphic design in Bulgaria",
       "source": "Hacker News",
-      "url": "https://simonwillison.net/2025/Mar/2/hallucinations-in-code/"
+      "url": "http://socmus.com/en/"
     },
     {
-      "title": "Setting up a home NAS with Linux",
+      "title": "Exploring DotNetIsolator: A library for running isolated .NET runtimes inside .NET",
+      "source": "GitHub Trending",
+      "url": "https://github.com/SteveSandersonMS/DotNetIsolator"
+    },
+    {
+      "title": "Setting up a reverse proxy with Nginx",
       "source": "Curated Topic",
       "url": null
     },
@@ -27,29 +37,19 @@
       "url": null
     },
     {
-      "title": "Show HN: Tangled \u2013 Git collaboration platform built on atproto",
-      "source": "Hacker News",
-      "url": "https://blog.tangled.sh/intro"
-    },
-    {
-      "title": "Made a scroll bar buddy that walks down the page when you scroll",
-      "source": "Hacker News",
-      "url": "https://focusfurnace.com/scroll_buddy.html"
-    },
-    {
-      "title": "Setting up a smart home hub",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
       "title": "Windows power user tricks",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Exploring chatglm.cpp: C++ implementation of ChatGLM-6B & ChatGLM2-6B & ChatGLM3 & GLM4(V)",
-      "source": "GitHub Trending",
-      "url": "https://github.com/li-plus/chatglm.cpp"
+      "title": "Phlex for Rails Emails: Action Mailer Without ERB",
+      "source": "Hacker News",
+      "url": "https://camillovisini.com/coding/phlex-for-rails-emails-action-mailer-without-erb"
+    },
+    {
+      "title": "SSH tips and tricks for remote management",
+      "source": "Curated Topic",
+      "url": null
     }
   ]
 }

@@ -43,7 +43,7 @@ enableEmoji = true
   
   # Disable home info mode to show posts directly
   [params.homeInfoParams]
-    enabled = false
+    enabled = true
 
   # Enable search
   [params.assets]

@@ -1,53 +1,53 @@
 {
-  "timestamp": "2025-03-03T18:07:46.113383",
+  "timestamp": "2025-03-03T18:11:04.834376",
   "topics": [
     {
-      "title": "How does our brain store memories?",
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
+      "source": "Hacker News",
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
+    },
+    {
+      "title": "Show HN: Firebender, a simple coding agent for Android Engineers",
+      "source": "Hacker News",
+      "url": "https://docs.firebender.com/get-started/agent"
+    },
+    {
+      "title": "Exploring shell_gpt: A command-line productivity tool powered by AI large language models like GPT-4, will help you accomplish your tasks faster and more efficiently.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/TheR1D/shell_gpt"
+    },
+    {
+      "title": "The Golden Age of Japanese Pencils, 1952-1967",
+      "source": "Hacker News",
+      "url": "https://notes.stlartsupply.com/the-golden-age-of-japanese-pencils-1952-1967/"
+    },
+    {
+      "title": "AWS Cat Qubits Make Quantum Error Correction Effective, Affordable",
+      "source": "Hacker News",
+      "url": "https://www.nextplatform.com/2025/02/27/aws-cat-qubits-make-quantum-error-correction-effective-affordable/"
+    },
+    {
+      "title": "Setting up a reverse proxy with Nginx",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "What makes thunder and lightning happen?",
+      "title": "Cloud storage alternatives for privacy",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Why do we dream when we sleep?",
+      "title": "Docker Compose for local development",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "How do plants grow from seeds?",
-      "source": "Curated Topic",
-      "url": null
+      "title": "Exploring orbstack: Fast, light, simple Docker containers & Linux machines",
+      "source": "GitHub Trending",
+      "url": "https://github.com/orbstack/orbstack"
     },
     {
-      "title": "What is John Doubleday (restorer) and why is it important?",
-      "source": "Wikipedia Featured",
-      "url": "https://en.wikipedia.org/wiki/John_Doubleday_(restorer)"
-    },
-    {
-      "title": "Why is the sky blue?",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "How would you explain John Doubleday (restorer) to a child?",
-      "source": "Wikipedia Featured",
-      "url": "https://en.wikipedia.org/wiki/John_Doubleday_(restorer)"
-    },
-    {
-      "title": "How do smartphones know where we are?",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "How does money work in our society?",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "What causes earthquakes and volcanoes?",
+      "title": "Home network security best practices",
       "source": "Curated Topic",
       "url": null
     }

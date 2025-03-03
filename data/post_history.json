@@ -159,6 +159,14 @@
       "topic": "Why do we dream when we sleep?",
       "source": "Curated Topic",
       "file_path": "content/posts/why-do-we-dream-when-we-sleep.md"
+    },
+    {
+      "title": "Boost Your Command-Line Productivity with shell_gpt: AI-Powered Terminal Assistant Using GPT-4",
+      "slug": "boost-your-command-line-productivity-with-shell-gpt-ai-powered-terminal-assistant-using-gpt-4",
+      "date": "2025-03-03",
+      "topic": "Exploring shell_gpt: A command-line productivity tool powered by AI large language models like GPT-4, will help you accomplish your tasks faster and more efficiently.",
+      "source": "GitHub Trending",
+      "file_path": "content/posts/boost-your-command-line-productivity-with-shell-gpt-ai-powered-terminal-assistant-using-gpt-4.md"
     }
   ]
 }

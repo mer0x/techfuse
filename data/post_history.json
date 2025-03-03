@@ -151,6 +151,14 @@
       "topic": "Why is the ocean salty?",
       "source": "Curated Topic",
       "file_path": "content/posts/why-is-the-ocean-salty-and-why-your-bathwater-isnt.md"
+    },
+    {
+      "title": "Why Do We Dream When We Sleep?",
+      "slug": "why-do-we-dream-when-we-sleep",
+      "date": "2025-03-03",
+      "topic": "Why do we dream when we sleep?",
+      "source": "Curated Topic",
+      "file_path": "content/posts/why-do-we-dream-when-we-sleep.md"
     }
   ]
 }

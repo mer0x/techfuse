@@ -1,40 +1,30 @@
 {
-  "timestamp": "2025-03-03T18:03:28.977616",
+  "timestamp": "2025-03-03T18:07:46.113383",
   "topics": [
-    {
-      "title": "What causes earthquakes and volcanoes?",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "How do bees make honey?",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "How would you explain Bill Denny to a child?",
-      "source": "Wikipedia Featured",
-      "url": "https://en.wikipedia.org/wiki/Bill_Denny"
-    },
-    {
-      "title": "How do smartphones know where we are?",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Why is the ocean salty?",
-      "source": "Curated Topic",
-      "url": null
-    },
     {
       "title": "How does our brain store memories?",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "What is Bill Denny and why is it important?",
+      "title": "What makes thunder and lightning happen?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Why do we dream when we sleep?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "How do plants grow from seeds?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "What is John Doubleday (restorer) and why is it important?",
       "source": "Wikipedia Featured",
-      "url": "https://en.wikipedia.org/wiki/Bill_Denny"
+      "url": "https://en.wikipedia.org/wiki/John_Doubleday_(restorer)"
     },
     {
       "title": "Why is the sky blue?",
@@ -42,12 +32,22 @@
       "url": null
     },
     {
-      "title": "How does a car engine work?",
+      "title": "How would you explain John Doubleday (restorer) to a child?",
+      "source": "Wikipedia Featured",
+      "url": "https://en.wikipedia.org/wiki/John_Doubleday_(restorer)"
+    },
+    {
+      "title": "How do smartphones know where we are?",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "How do plants grow from seeds?",
+      "title": "How does money work in our society?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "What causes earthquakes and volcanoes?",
       "source": "Curated Topic",
       "url": null
     }

@@ -3,6 +3,7 @@ import requests
 import json
 import random
 import os
+import re
 from datetime import datetime
 
 class TopicFetcher:
@@ -47,6 +48,35 @@ class TopicFetcher:
             "Linux server monitoring tools",
             "Setting up a smart home hub"
         ]
+        
+        # Patterns to check if title is in English and tech-related
+        self.non_english_pattern = re.compile(r'[^\x00-\x7F]+')  # Matches non-ASCII characters
+        self.tech_keywords = [
+            'linux', 'windows', 'server', 'cloud', 'docker', 'kubernetes', 'k8s', 
+            'devops', 'aws', 'azure', 'gcp', 'google cloud', 'api', 'code', 'coding',
+            'software', 'hardware', 'network', 'security', 'hacking', 'hack', 'github',
+            'git', 'development', 'programming', 'script', 'automation', 'cli', 'command',
+            'terminal', 'bash', 'shell', 'python', 'javascript', 'java', 'rust', 'go',
+            'database', 'sql', 'nosql', 'mongodb', 'postgresql', 'mysql', 'hosting',
+            'self-hosted', 'selfhosted', 'homelab', 'home lab', 'raspberry pi', 'vm',
+            'virtual machine', 'container', 'system', 'admin', 'sysadmin', 'web', 'app',
+            'application', 'ci/cd', 'terraform', 'ansible', 'puppet', 'chef', 'monitor',
+            'logging', 'vpn', 'router', 'firewall', 'proxy', 'nginx', 'apache', 'http',
+            'https', 'ssh', 'ftp', 'dns', 'ip', 'protocol', 'framework', 'library',
+            'package', 'dependency', 'microservice', 'architecture', 'design pattern',
+            'rest', 'graphql', 'api', 'interface', 'frontend', 'backend', 'fullstack',
+            'data', 'storage', 'cache', 'memory', 'cpu', 'gpu', 'processor', 'encryption'
+        ]
+    
+    def is_valid_tech_topic(self, title):
+        """Check if the topic is English and tech related"""
+        # Skip topics with non-ASCII characters (likely non-English)
+        if self.non_english_pattern.search(title):
+            return False
+            
+        # Check if title contains any tech keywords
+        title_lower = title.lower()
+        return any(keyword in title_lower for keyword in self.tech_keywords)
     
     def get_reddit_topics(self, count=5):
         """Fetch trending topics from selected subreddits"""
@@ -55,11 +85,11 @@ class TopicFetcher:
         
         try:
             # Randomly select subreddits to pull from
-            selected_subreddits = random.sample(self.subreddits, min(3, len(self.subreddits)))
+            selected_subreddits = random.sample(self.subreddits, min(5, len(self.subreddits)))
             
             for subreddit in selected_subreddits:
                 response = requests.get(
-                    f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10",
+                    f"https://www.reddit.com/r/{subreddit}/hot.json?limit=15",
                     headers=headers
                 )
                 
@@ -71,8 +101,11 @@ class TopicFetcher:
                         post_data = post.get('data', {})
                         title = post_data.get('title', '')
                         
-                        # Filter out meta posts and announcements
-                        if title and not title.lower().startswith(('[meta]', '[announcement]')):
+                        # Apply more strict filtering
+                        if (title and 
+                            not title.lower().startswith(('[meta]', '[announcement]')) and
+                            self.is_valid_tech_topic(title)):
+                            
                             topics.append({
                                 'title': title,
                                 'source': f"r/{subreddit}",
@@ -95,16 +128,22 @@ class TopicFetcher:
             # Get top stories IDs
             response = requests.get("https://hacker-news.firebaseio.com/v0/topstories.json")
             if response.status_code == 200:
-                story_ids = response.json()[:20]  # Get top 20 stories
+                story_ids = response.json()[:30]  # Get top 30 stories to have more to filter
                 
                 # Get story details
                 for story_id in story_ids:
                     story_response = requests.get(f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json")
                     if story_response.status_code == 200:
                         story = story_response.json()
-                        if 'title' in story and story.get('type') == 'story':
+                        title = story.get('title', '')
+                        
+                        # Apply strict filtering
+                        if (title and 
+                            story.get('type') == 'story' and
+                            self.is_valid_tech_topic(title)):
+                            
                             topics.append({
-                                'title': story['title'],
+                                'title': title,
                                 'source': 'Hacker News',
                                 'url': story.get('url', f"https://news.ycombinator.com/item?id={story_id}")
                             })
@@ -122,9 +161,13 @@ class TopicFetcher:
         topics = []
         
         try:
+            # Filter by specific tech topics
+            tech_topics = ["python", "javascript", "devops", "kubernetes", "docker", "linux", "aws", "azure"]
+            selected_topic = random.choice(tech_topics)
+            
             # GitHub doesn't have an official API for trending, so we'll use a workaround
             response = requests.get(
-                "https://api.github.com/search/repositories?q=created:>2023-01-01&sort=stars&order=desc",
+                f"https://api.github.com/search/repositories?q=topic:{selected_topic} created:>2023-01-01&sort=stars&order=desc",
                 headers={'Accept': 'application/vnd.github.v3+json'}
             )
             
@@ -132,12 +175,22 @@ class TopicFetcher:
                 repos = response.json().get('items', [])
                 
                 for repo in repos:
-                    if repo.get('name') and repo.get('description'):
-                        topics.append({
-                            'title': f"Exploring {repo['name']}: {repo['description']}",
-                            'source': 'GitHub Trending',
-                            'url': repo['html_url']
-                        })
+                    name = repo.get('name', '')
+                    description = repo.get('description', '')
+                    
+                    # Skip repos with non-English names or descriptions
+                    if (name and description and 
+                        not self.non_english_pattern.search(name) and 
+                        not self.non_english_pattern.search(description)):
+                        
+                        title = f"Exploring {name}: {description}"
+                        
+                        if self.is_valid_tech_topic(title):
+                            topics.append({
+                                'title': title,
+                                'source': 'GitHub Trending',
+                                'url': repo['html_url']
+                            })
                 
                 # Shuffle and limit topics
                 random.shuffle(topics)
@@ -152,8 +205,8 @@ class TopicFetcher:
         all_topics = []
         
         # Get topics from different sources
-        all_topics.extend(self.get_reddit_topics(count=5))
-        all_topics.extend(self.get_hacker_news_topics(count=3))
+        all_topics.extend(self.get_reddit_topics(count=6))
+        all_topics.extend(self.get_hacker_news_topics(count=4))
         all_topics.extend(self.get_github_trending(count=2))
         
         # If we didn't get enough topics, add some from backup list
@@ -171,8 +224,11 @@ class TopicFetcher:
         # Shuffle all topics
         random.shuffle(all_topics)
         
+        # Final filtering to ensure all topics are valid
+        filtered_topics = [topic for topic in all_topics if self.is_valid_tech_topic(topic['title'])]
+        
         # Return limited number of topics
-        return all_topics[:count]
+        return filtered_topics[:count]
     
     def save_topics(self, filepath='topics.json'):
         """Save fetched topics to a JSON file"""

@@ -1,113 +1,55 @@
-baseURL = "https://mer0x.github.io/techfuse/"  # Replace with your actual URL
+baseURL = "https://mer0x.github.io/techfuse/"
 languageCode = "en-us"
 title = "Tech Fuse"
 theme = "PaperMod"
 
-# Enable robots.txt
+# Enable robots.txt and emojis
 enableRobotsTXT = true
-
-# Content configuration
-buildDrafts = false
-buildFuture = false
-buildExpired = false
 enableEmoji = true
 
-# Default menu entries
+# Add main menu items
 [menu]
-  [[menu.main]]
-    identifier = "categories"
-    name = "Categories"
-    url = "/categories/"
-    weight = 10
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 20
+    weight = 10
   [[menu.main]]
     identifier = "archives"
     name = "Archives"
     url = "/archives/"
-    weight = 30
+    weight = 20
   [[menu.main]]
     identifier = "search"
     name = "Search"
     url = "/search/"
-    weight = 40
+    weight = 30
 
 # Theme parameters
 [params]
   # Site description
-  description = "An AI-powered tech blog focused on self-hosting, DevOps, cloud computing, and more"
-  author = "Tech Fuse"
+  description = "An AI-powered tech blog"
   
   # Default theme (auto, light, dark)
   defaultTheme = "auto"
 
-  # Show summary on home page
+  # Display settings
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  ShowWordCount = true
   ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  comments = true
-  hideMeta = false
-  hideSummary = false
   
-  # Home info and profile mode
-  [params.profileMode]
-    enabled = true
-    title = "Tech Fuse"
-    subtitle = "Automated insights into self-hosting, DevOps, cloud, and modern tech solutions"
-    imageUrl = "/images/logo.png"  # Add your logo here
-    imageWidth = 120
-    imageHeight = 120
-
-    # Social icons - add your own here
-    [[params.profileMode.buttons]]
-      name = "Archives"
-      url = "/archives/"
-
-    [[params.profileMode.buttons]]
-      name = "Tags"
-      url = "/tags/"
-
-  # Home info mode alternatively
+  # Disable home info mode to show posts directly
   [params.homeInfoParams]
-    Title = "Tech Fuse 🚀"
-    Content = """
-    Welcome to Tech Fuse - your automated guide to the latest trends and tutorials in:
-    
-    - **Self-hosting** & Home Labs
-    - **DevOps** & Cloud Computing
-    - **Containerization** with Docker & Kubernetes
-    - **Linux** Tips & Tricks
-    - **Automation** & Infrastructure as Code
-    
-    New content generated and published automatically!
-    """
+    enabled = false
 
-  # Social icons
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/yourusername"  # Replace with your GitHub
+  # Enable search
+  [params.assets]
+    disableFingerprinting = true
 
-  [[params.socialIcons]]
-    name = "rss"
-    url = "index.xml"
-
-  # Cover image for posts
-  [params.cover]
-    hidden = false
-    hiddenInList = false
-    hiddenInSingle = false
-
-  # Search configuration
+  # Search configuration (important for search to work)
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
@@ -119,35 +61,18 @@ enableEmoji = true
 
 # Taxonomy settings
 [taxonomies]
-  category = "categories"
   tag = "tags"
-  series = "series"
 
-# Privacy settings
-[privacy]
-  [privacy.vimeo]
-    disabled = false
-    simple = true
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
-  [privacy.instagram]
-    disabled = false
-    simple = true
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
-
-# Markup settings for code highlighting and rendering
+# Markup settings for code highlighting 
 [markup]
   [markup.highlight]
-    noClasses = false
     codeFences = true
     guessSyntax = true
-    lineNos = true
-    lineNumbersInTable = true
-    tabWidth = 4
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true  # Allow HTML in markdown
+    lineNos = false
+    style = "monokai"
+  [markup.goldmark.renderer]
+    unsafe = true  # Allow HTML in markdown
+
+# Create search page
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

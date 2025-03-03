@@ -1,55 +1,55 @@
 {
-  "timestamp": "2025-03-03T12:28:14.979184",
+  "timestamp": "2025-03-03T12:31:23.816392",
   "topics": [
     {
-      "title": "Blender-made movie Flow takes Oscar",
+      "title": "ninjavis \u2013 generate visualization from ninja build logs",
       "source": "Hacker News",
-      "url": "https://www.reuters.com/lifestyle/flow-wins-best-animated-feature-film-oscar-2025-03-03/"
+      "url": "https://github.com/chagui/ninjavis"
     },
     {
-      "title": "Exploring axlearn: An Extensible Deep Learning Library",
+      "title": "Smallpond \u2013 A lightweight data processing framework built on DuckDB and 3FS",
+      "source": "Hacker News",
+      "url": "https://github.com/deepseek-ai/smallpond"
+    },
+    {
+      "title": "Exploring airoboros: Customizable implementation of the self-instruct paper.",
       "source": "GitHub Trending",
-      "url": "https://github.com/apple/axlearn"
+      "url": "https://github.com/jondurbin/airoboros"
     },
     {
-      "title": "Docker containers for beginners",
+      "title": "Linux command line productivity tips",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Migrating from Windows to Linux",
+      "title": "Why do we have both CSRF protection and CORS?",
+      "source": "Hacker News",
+      "url": "https://smagin.fyi/posts/cross-site-requests/"
+    },
+    {
+      "title": "Setting up a VPN at home",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Managing Docker volumes effectively",
+      "title": "Self-hosting your own password manager",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Exploring FindTheChatGPTer: ChatGPT\u7206\u706b\uff0c\u5f00\u542f\u4e86\u901a\u5f80AGI\u7684\u5173\u952e\u4e00\u6b65\uff0c\u672c\u9879\u76ee\u65e8\u5728\u6c47\u603b\u90a3\u4e9bChatGPT\u7684\u5f00\u6e90\u5e73\u66ff\u4eec\uff0c\u5305\u62ec\u6587\u672c\u5927\u6a21\u578b\u3001\u591a\u6a21\u6001\u5927\u6a21\u578b\u7b49\uff0c\u4e3a\u5927\u5bb6\u63d0\u4f9b\u4e00\u4e9b\u4fbf\u5229",
+      "title": "Kubernetes cluster on Raspberry Pi",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Building a home media server",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Exploring EX-chatGPT: Let ChatGPT truly learn how to go online and call APIs! 'EX-ChatGPT' can rival and even surpass NewBing",
       "source": "GitHub Trending",
-      "url": "https://github.com/chenking2020/FindTheChatGPTer"
-    },
-    {
-      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
-      "source": "Hacker News",
-      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
-    },
-    {
-      "title": "CI/CD pipelines for hobbyist projects",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "The Pentium contains a complicated circuit to multiply by three",
-      "source": "Hacker News",
-      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
-    },
-    {
-      "title": "Setting up a reverse proxy with Nginx",
-      "source": "Curated Topic",
-      "url": null
+      "url": "https://github.com/circlestarzero/EX-chatGPT"
     }
   ]
 }

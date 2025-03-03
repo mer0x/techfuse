@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://mer0x.github.io/techfuse/sitemap.xml

@@ -1,53 +1,53 @@
 {
-  "timestamp": "2025-03-03T15:09:33.624211",
+  "timestamp": "2025-03-03T18:03:28.977616",
   "topics": [
     {
-      "title": "Setting up a reverse proxy with Nginx",
+      "title": "What causes earthquakes and volcanoes?",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "The Internals of PostgreSQL",
-      "source": "Hacker News",
-      "url": "http://www.interdb.jp/pg/index.html"
-    },
-    {
-      "title": "Exploring top-javascript-interview-questions: 200 important JavaScript interview questions for busy Front End Engineers (updated for 2025)",
-      "source": "GitHub Trending",
-      "url": "https://github.com/yangshun/top-javascript-interview-questions"
-    },
-    {
-      "title": "Exploring Mastering-GitHub-Copilot-for-Paired-Programming: A 10-Lesson course teaching everything you need to know about harnessing GitHub Copilot as an AI Paired Programming resource.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming"
-    },
-    {
-      "title": "The Pentium contains a complicated circuit to multiply by three",
-      "source": "Hacker News",
-      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
-    },
-    {
-      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
-      "source": "Hacker News",
-      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
-    },
-    {
-      "title": "Managing Docker volumes effectively",
+      "title": "How do bees make honey?",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "I struggled with Git, so I'm making a game to spare others the pain",
-      "source": "Hacker News",
-      "url": "https://initialcommit.com/blog/im-making-a-git-game"
+      "title": "How would you explain Bill Denny to a child?",
+      "source": "Wikipedia Featured",
+      "url": "https://en.wikipedia.org/wiki/Bill_Denny"
     },
     {
-      "title": "Docker containers for beginners",
+      "title": "How do smartphones know where we are?",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Cloud storage alternatives for privacy",
+      "title": "Why is the ocean salty?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "How does our brain store memories?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "What is Bill Denny and why is it important?",
+      "source": "Wikipedia Featured",
+      "url": "https://en.wikipedia.org/wiki/Bill_Denny"
+    },
+    {
+      "title": "Why is the sky blue?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "How does a car engine work?",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "How do plants grow from seeds?",
       "source": "Curated Topic",
       "url": null
     }

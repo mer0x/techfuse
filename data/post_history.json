@@ -143,6 +143,14 @@
       "topic": "Managing Docker volumes effectively",
       "source": "Curated Topic",
       "file_path": "content/posts/managing-docker-volumes-effectively-a-practical-guide.md"
+    },
+    {
+      "title": "Why is the Ocean Salty? (And Why Your Bathwater Isn't!)",
+      "slug": "why-is-the-ocean-salty-and-why-your-bathwater-isnt",
+      "date": "2025-03-03",
+      "topic": "Why is the ocean salty?",
+      "source": "Curated Topic",
+      "file_path": "content/posts/why-is-the-ocean-salty-and-why-your-bathwater-isnt.md"
     }
   ]
 }

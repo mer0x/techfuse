@@ -79,6 +79,14 @@
       "topic": "I struggled with Git, so I'm making a game to spare others the pain",
       "source": "Hacker News",
       "file_path": "content/posts/turn-git-struggles-into-fun-learn-with-a-new-game.md"
+    },
+    {
+      "title": "Setting Up a Kubernetes Cluster on Raspberry Pi: A Beginner\u2019s Guide",
+      "slug": "setting-up-a-kubernetes-cluster-on-raspberry-pi-a-beginners-guide",
+      "date": "2025-03-03",
+      "topic": "Kubernetes cluster on Raspberry Pi",
+      "source": "Curated Topic",
+      "file_path": "content/posts/setting-up-a-kubernetes-cluster-on-raspberry-pi-a-beginners-guide.md"
     }
   ]
 }

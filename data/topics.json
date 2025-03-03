@@ -1,55 +1,50 @@
 {
-  "timestamp": "2025-03-03T13:52:00.518866",
+  "timestamp": "2025-03-03T13:56:58.773878",
   "topics": [
-    {
-      "title": "Cloud storage alternatives for privacy",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Exploring nofwl: NoFWL Desktop Application",
-      "source": "GitHub Trending",
-      "url": "https://github.com/lencx/nofwl"
-    },
-    {
-      "title": "I struggled with Git, so I'm making a game to spare others the pain",
-      "source": "Hacker News",
-      "url": "https://initialcommit.com/blog/im-making-a-git-game"
-    },
     {
       "title": "Kubernetes cluster on Raspberry Pi",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Docker containers for beginners",
+      "title": "API design note: Beware of adding an \"Other\" enum value",
+      "source": "Hacker News",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
+    },
+    {
+      "title": "Matt's Script Archive (1995)",
+      "source": "Hacker News",
+      "url": "https://www.scriptarchive.com/"
+    },
+    {
+      "title": "Self-hosting your own password manager",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Alibaba Launches C930 RISC-V Chip Amid Shift from Western Tech",
-      "source": "Hacker News",
-      "url": "https://www.hpcwire.com/2025/02/28/alibaba-launches-c930-risc-v-chip-amid-shift-from-western-tech/"
-    },
-    {
-      "title": "AWS Cat Qubits Make Quantum Error Correction Effective, Affordable",
-      "source": "Hacker News",
-      "url": "https://www.nextplatform.com/2025/02/27/aws-cat-qubits-make-quantum-error-correction-effective-affordable/"
-    },
-    {
-      "title": "Exploring SpotX-Bash: SpotX Mac and Linux adblocker for the Spotify desktop client, in Bash",
+      "title": "Exploring iptv-sources: Autoupdate iptv sources",
       "source": "GitHub Trending",
-      "url": "https://github.com/SpotX-Official/SpotX-Bash"
+      "url": "https://github.com/HerbertHe/iptv-sources"
     },
     {
-      "title": "Migrating from Windows to Linux",
-      "source": "Curated Topic",
-      "url": null
+      "title": "Geothermal power is a climate moon shot beneath our feet",
+      "source": "Hacker News",
+      "url": "https://www.newyorker.com/news/the-lede/geothermal-power-is-a-climate-moon-shot-beneath-our-feet"
+    },
+    {
+      "title": "Exploring dockge: A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager",
+      "source": "GitHub Trending",
+      "url": "https://github.com/louislam/dockge"
     },
     {
       "title": "Show HN: Prompting LLMs in Bash scripts",
       "source": "Hacker News",
       "url": "https://elijahpotter.dev/articles/prompting_large_language_models_in_bash_scripts"
+    },
+    {
+      "title": "Home network security best practices",
+      "source": "Curated Topic",
+      "url": null
     }
   ]
 }

@@ -119,6 +119,14 @@
       "topic": "I struggled with Git, so I'm making a game to spare others the pain",
       "source": "Hacker News",
       "file_path": "content/posts/transforming-git-frustration-into-fun-how-a-game-can-change-the-learning-curve.md"
+    },
+    {
+      "title": "Exploring Olares: An Open-Source Sovereign Cloud OS for Local AI",
+      "slug": "exploring-olares-an-open-source-sovereign-cloud-os-for-local-ai",
+      "date": "2025-03-03",
+      "topic": "Exploring Olares: Olares: An Open-Source Sovereign Cloud OS for Local AI",
+      "source": "GitHub Trending",
+      "file_path": "content/posts/exploring-olares-an-open-source-sovereign-cloud-os-for-local-ai.md"
     }
   ]
 }

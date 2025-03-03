@@ -1,30 +1,45 @@
 {
-  "timestamp": "2025-03-03T14:26:14.710860",
+  "timestamp": "2025-03-03T14:58:30.226792",
   "topics": [
     {
-      "title": "Setting up a VPN at home",
+      "title": "Automating backups for home servers",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Building a home media server",
+      "title": "Home network security best practices",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Exploring go-backend-clean-architecture: A Go (Golang) Backend Clean Architecture project with Gin, MongoDB, JWT Authentication Middleware, Test, and Docker.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/amitshekhariitbhu/go-backend-clean-architecture"
-    },
-    {
-      "title": "Matt's Script Archive (1995)",
+      "title": "The Pentium contains a complicated circuit to multiply by three",
       "source": "Hacker News",
-      "url": "https://www.scriptarchive.com/"
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
     },
     {
-      "title": "Setting up a reverse proxy with Nginx",
+      "title": "Cloud storage alternatives for privacy",
       "source": "Curated Topic",
       "url": null
+    },
+    {
+      "title": "Gooey rubber that's slowly ruining old hard drives",
+      "source": "Hacker News",
+      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
+    },
+    {
+      "title": "Exploring seabird: Native Kubernetes desktop IDE designed for seamless cluster exploration",
+      "source": "GitHub Trending",
+      "url": "https://github.com/getseabird/seabird"
+    },
+    {
+      "title": "Exploring Olares: Olares: An Open-Source Sovereign Cloud OS for Local AI",
+      "source": "GitHub Trending",
+      "url": "https://github.com/beclab/Olares"
+    },
+    {
+      "title": "API design note: Beware of adding an \"Other\" enum value",
+      "source": "Hacker News",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
     },
     {
       "title": "AWS Cat Qubits Make Quantum Error Correction Effective, Affordable",
@@ -32,22 +47,7 @@
       "url": "https://www.nextplatform.com/2025/02/27/aws-cat-qubits-make-quantum-error-correction-effective-affordable/"
     },
     {
-      "title": "We in-housed our data labelling",
-      "source": "Hacker News",
-      "url": "https://www.ericbutton.co/p/data-labelling"
-    },
-    {
-      "title": "Exploring python-web: Curso para aprender desarrollo frontend Web con Python puro desde cero. Elaborado durante las emisiones en directo desde Twitch de MoureDev.",
-      "source": "GitHub Trending",
-      "url": "https://github.com/mouredev/python-web"
-    },
-    {
-      "title": "I struggled with Git, so I'm making a game to spare others the pain",
-      "source": "Hacker News",
-      "url": "https://initialcommit.com/blog/im-making-a-git-game"
-    },
-    {
-      "title": "Self-hosting your own password manager",
+      "title": "Setting up a VPN at home",
       "source": "Curated Topic",
       "url": null
     }

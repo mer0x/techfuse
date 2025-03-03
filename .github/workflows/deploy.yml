@@ -1,7 +1,7 @@
-name: Auto Generate & Deploy ELI5 Blog Post
+name: Auto Generate & Deploy Blog Post
 on:
   schedule:
-    - cron: "0 8 * * *"  # Runs at 8:00 AM UTC every day
+    - cron: "0 8 * * *"  # Runs every hour
   workflow_dispatch:  # Allows manual runs from GitHub Actions
   push:
     branches:
@@ -23,12 +23,12 @@ jobs:
     - name: Install dependencies
       run: |
         pip install openai requests pyyaml
-    - name: Run script to fetch ELI5 topics
-      run: python scripts/eli5_topic_fetcher.py
-    - name: Run script to generate ELI5 article
+    - name: Run script to fetch topics
+      run: python scripts/topic_fetcher.py
+    - name: Run script to generate article
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      run: python scripts/eli5_post_generator.py
+      run: python scripts/post_generator.py
     - name: Commit and Push new post and tag files
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -36,7 +36,7 @@ jobs:
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
         git add content/posts/ data/
-        git commit -m "Auto-publish new ELI5 blog post via GitHub Actions" || echo "No changes to commit"
+        git commit -m "Auto-publish new blog post via GitHub Actions" || echo "No changes to commit"
         git pull --rebase origin main  # Pull new changes from repo
         git push origin main
   deploy:

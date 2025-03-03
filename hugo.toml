@@ -41,9 +41,6 @@ enableEmoji = true
   ShowCodeCopyButtons = true
   ShowRssButtonInSectionTermList = true
   
-  # Disable home info mode to show posts directly
-  [params.homeInfoParams]
-    enabled = true
 
   # Enable search
   [params.assets]

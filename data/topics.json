@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-03-03T13:19:37.469492",
+  "topics": [
+    {
+      "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
+      "source": "Hacker News",
+      "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
+    },
+    {
+      "title": "Linux server monitoring tools",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Automating backups for home servers",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "I struggled with Git, so I'm making a game to spare others the pain",
+      "source": "Hacker News",
+      "url": "https://initialcommit.com/blog/im-making-a-git-game"
+    },
+    {
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
+      "source": "Hacker News",
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
+    },
+    {
+      "title": "Windows power user tricks",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Exploring uv: An extremely fast Python package and project manager, written in Rust.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/astral-sh/uv"
+    },
+    {
+      "title": "Migrating from Windows to Linux",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Exploring RAG_Techniques: This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. RAG systems combine information retrieval with generative models to provide accurate and contextually rich responses.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/NirDiamant/RAG_Techniques"
+    },
+    {
+      "title": "The Pentium contains a complicated circuit to multiply by three",
+      "source": "Hacker News",
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
+    }
+  ]
+}

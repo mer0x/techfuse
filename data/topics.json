@@ -1,43 +1,23 @@
 {
-  "timestamp": "2025-03-03T12:31:23.816392",
+  "timestamp": "2025-03-03T12:49:46.100655",
   "topics": [
     {
-      "title": "ninjavis \u2013 generate visualization from ninja build logs",
-      "source": "Hacker News",
-      "url": "https://github.com/chagui/ninjavis"
+      "title": "Linux server monitoring tools",
+      "source": "Curated Topic",
+      "url": null
     },
     {
-      "title": "Smallpond \u2013 A lightweight data processing framework built on DuckDB and 3FS",
+      "title": "Virtual museum of socialist era graphic design in Bulgaria",
       "source": "Hacker News",
-      "url": "https://github.com/deepseek-ai/smallpond"
+      "url": "http://socmus.com/en/"
     },
     {
-      "title": "Exploring airoboros: Customizable implementation of the self-instruct paper.",
+      "title": "Exploring FluxMusic: Text-to-Music Generation with Rectified Flow Transformers",
       "source": "GitHub Trending",
-      "url": "https://github.com/jondurbin/airoboros"
+      "url": "https://github.com/feizc/FluxMusic"
     },
     {
-      "title": "Linux command line productivity tips",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Why do we have both CSRF protection and CORS?",
-      "source": "Hacker News",
-      "url": "https://smagin.fyi/posts/cross-site-requests/"
-    },
-    {
-      "title": "Setting up a VPN at home",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Self-hosting your own password manager",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Kubernetes cluster on Raspberry Pi",
+      "title": "Setting up a home NAS with Linux",
       "source": "Curated Topic",
       "url": null
     },
@@ -47,9 +27,29 @@
       "url": null
     },
     {
-      "title": "Exploring EX-chatGPT: Let ChatGPT truly learn how to go online and call APIs! 'EX-ChatGPT' can rival and even surpass NewBing",
+      "title": "Docker Compose for local development",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Self-hosting your own password manager",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Exploring HiddenDesktop: HVNC for Cobalt Strike",
       "source": "GitHub Trending",
-      "url": "https://github.com/circlestarzero/EX-chatGPT"
+      "url": "https://github.com/WKL-Sec/HiddenDesktop"
+    },
+    {
+      "title": "BM25 in PostgreSQL",
+      "source": "Hacker News",
+      "url": "https://blog.vectorchord.ai/vectorchord-bm25-revolutionize-postgresql-search-with-bm25-ranking-3x-faster-than-elasticsearch"
+    },
+    {
+      "title": "Made a scroll bar buddy that walks down the page when you scroll",
+      "source": "Hacker News",
+      "url": "https://focusfurnace.com/scroll_buddy.html"
     }
   ]
 }

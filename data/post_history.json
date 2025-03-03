@@ -31,6 +31,14 @@
       "topic": "Exploring BPB-Worker-Panel: A GUI Panel providing Worker subscriptions for VLESS, Trojan and Warp configs alongside chain proxies, offering full DNS, clean IP,  Fragment, Warp, Warp pro and routing settings for cross-platform clients using Sing-box, Clash/Mihomo and Xray cores.",
       "source": "GitHub Trending",
       "file_path": "content/posts/mastering-bpb-worker-panel-the-ultimate-guide-to-advanced-proxy-management.md"
+    },
+    {
+      "title": "Revisiting Matt's Script Archive: A 1995 Internet Relic",
+      "slug": "revisiting-matts-script-archive-a-1995-internet-relic",
+      "date": "2025-03-03",
+      "topic": "Matt's Script Archive (1995)",
+      "source": "Hacker News",
+      "file_path": "content/posts/revisiting-matts-script-archive-a-1995-internet-relic.md"
     }
   ]
 }

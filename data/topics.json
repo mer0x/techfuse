@@ -1,13 +1,43 @@
 {
-  "timestamp": "2025-03-03T13:26:45.792748",
+  "timestamp": "2025-03-03T13:31:28.914989",
   "topics": [
     {
-      "title": "Exploring ebook2audiobook: Convert ebooks to audiobooks with chapters and metadata using dynamic AI models and voice cloning. Supports 1,107+ languages!",
-      "source": "GitHub Trending",
-      "url": "https://github.com/DrewThomasson/ebook2audiobook"
+      "title": "Matt's Script Archive (1995)",
+      "source": "Hacker News",
+      "url": "https://www.scriptarchive.com/"
     },
     {
-      "title": "SSH tips and tricks for remote management",
+      "title": "Exploring gorilla-cli: LLMs for your CLI",
+      "source": "GitHub Trending",
+      "url": "https://github.com/gorilla-llm/gorilla-cli"
+    },
+    {
+      "title": "Losing a 5-year-long Illinois FOIA lawsuit for database schemas",
+      "source": "Hacker News",
+      "url": "https://mchap.io/losing-a-5yr-long-illinois-foia-lawsuit-for-database-schemas.html"
+    },
+    {
+      "title": "The Pentium contains a complicated circuit to multiply by three",
+      "source": "Hacker News",
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
+    },
+    {
+      "title": "We in-housed our data labelling",
+      "source": "Hacker News",
+      "url": "https://www.ericbutton.co/p/data-labelling"
+    },
+    {
+      "title": "Setting up a reverse proxy with Nginx",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Setting up a home NAS with Linux",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Windows power user tricks",
       "source": "Curated Topic",
       "url": null
     },
@@ -17,39 +47,9 @@
       "url": null
     },
     {
-      "title": "API design note: Beware of adding an \"Other\" enum value",
-      "source": "Hacker News",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
-    },
-    {
-      "title": "Matt's Script Archive (1995)",
-      "source": "Hacker News",
-      "url": "https://www.scriptarchive.com/"
-    },
-    {
-      "title": "Alibaba Launches C930 RISC-V Chip Amid Shift from Western Tech",
-      "source": "Hacker News",
-      "url": "https://www.hpcwire.com/2025/02/28/alibaba-launches-c930-risc-v-chip-amid-shift-from-western-tech/"
-    },
-    {
-      "title": "Exploring BPB-Worker-Panel: A GUI Panel providing Worker subscriptions for VLESS, Trojan and Warp configs alongside chain proxies, offering full DNS, clean IP,  Fragment, Warp, Warp pro and routing settings for cross-platform clients using Sing-box, Clash/Mihomo and Xray cores.",
+      "title": "Exploring bedrock-claude-chat: AWS-native chatbot using Bedrock + Claude (+Nova and Mistral)",
       "source": "GitHub Trending",
-      "url": "https://github.com/bia-pain-bache/BPB-Worker-Panel"
-    },
-    {
-      "title": "Docker Compose for local development",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Docker containers for beginners",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Hallucinations in code are the least dangerous form of LLM mistakes",
-      "source": "Hacker News",
-      "url": "https://simonwillison.net/2025/Mar/2/hallucinations-in-code/"
+      "url": "https://github.com/aws-samples/bedrock-claude-chat"
     }
   ]
 }

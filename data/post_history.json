@@ -111,6 +111,14 @@
       "topic": "Hallucinations in code are the least dangerous form of LLM mistakes",
       "source": "Hacker News",
       "file_path": "content/posts/understanding-and-mitigating-hallucinations-in-large-language-models-llms.md"
+    },
+    {
+      "title": "Transforming Git Frustration into Fun: How a Game Can Change the Learning Curve",
+      "slug": "transforming-git-frustration-into-fun-how-a-game-can-change-the-learning-curve",
+      "date": "2025-03-03",
+      "topic": "I struggled with Git, so I'm making a game to spare others the pain",
+      "source": "Hacker News",
+      "file_path": "content/posts/transforming-git-frustration-into-fun-how-a-game-can-change-the-learning-curve.md"
     }
   ]
 }

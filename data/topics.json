@@ -1,50 +1,55 @@
 {
-  "timestamp": "2025-03-03T14:20:23.917572",
+  "timestamp": "2025-03-03T14:26:14.710860",
   "topics": [
     {
-      "title": "Exploring linutil: Chris Titus Tech's Linux Toolbox - Linutil is a distro-agnostic toolbox designed to simplify everyday Linux tasks.",
+      "title": "Setting up a VPN at home",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Building a home media server",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Exploring go-backend-clean-architecture: A Go (Golang) Backend Clean Architecture project with Gin, MongoDB, JWT Authentication Middleware, Test, and Docker.",
       "source": "GitHub Trending",
-      "url": "https://github.com/ChrisTitusTech/linutil"
+      "url": "https://github.com/amitshekhariitbhu/go-backend-clean-architecture"
     },
     {
-      "title": "Exploring ubicloud: Open source alternative to AWS. Elastic compute, block storage (non replicated), firewall and load balancer, managed Postgres, and IAM services in public beta.",
+      "title": "Matt's Script Archive (1995)",
+      "source": "Hacker News",
+      "url": "https://www.scriptarchive.com/"
+    },
+    {
+      "title": "Setting up a reverse proxy with Nginx",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "AWS Cat Qubits Make Quantum Error Correction Effective, Affordable",
+      "source": "Hacker News",
+      "url": "https://www.nextplatform.com/2025/02/27/aws-cat-qubits-make-quantum-error-correction-effective-affordable/"
+    },
+    {
+      "title": "We in-housed our data labelling",
+      "source": "Hacker News",
+      "url": "https://www.ericbutton.co/p/data-labelling"
+    },
+    {
+      "title": "Exploring python-web: Curso para aprender desarrollo frontend Web con Python puro desde cero. Elaborado durante las emisiones en directo desde Twitch de MoureDev.",
       "source": "GitHub Trending",
-      "url": "https://github.com/ubicloud/ubicloud"
+      "url": "https://github.com/mouredev/python-web"
     },
     {
-      "title": "Docker containers for beginners",
+      "title": "I struggled with Git, so I'm making a game to spare others the pain",
+      "source": "Hacker News",
+      "url": "https://initialcommit.com/blog/im-making-a-git-game"
+    },
+    {
+      "title": "Self-hosting your own password manager",
       "source": "Curated Topic",
       "url": null
-    },
-    {
-      "title": "Docker Compose for local development",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Automating backups for home servers",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Hallucinations in code are the least dangerous form of LLM mistakes",
-      "source": "Hacker News",
-      "url": "https://simonwillison.net/2025/Mar/2/hallucinations-in-code/"
-    },
-    {
-      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
-      "source": "Hacker News",
-      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
-    },
-    {
-      "title": "Gooey rubber that's slowly ruining old hard drives",
-      "source": "Hacker News",
-      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
-    },
-    {
-      "title": "The Pentium contains a complicated circuit to multiply by three",
-      "source": "Hacker News",
-      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
     }
   ]
 }

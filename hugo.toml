@@ -4,7 +4,7 @@ title = "Tech Fuse"
 theme = "PaperMod"
 
 # Enable robots.txt and emojis
-enableRobotsTXT = true
+enableRobotsTXT = false
 enableEmoji = true
 
 # Add main menu items

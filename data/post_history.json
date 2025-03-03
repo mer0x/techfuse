@@ -15,6 +15,14 @@
       "topic": "Docker Compose for local development",
       "source": "Curated Topic",
       "file_path": "content/posts/mastering-docker-compose-for-local-development.md"
+    },
+    {
+      "title": "How to Transform Your ESP32 into a DNS Sinkhole and Combat Doomscrolling",
+      "slug": "how-to-transform-your-esp32-into-a-dns-sinkhole-and-combat-doomscrolling",
+      "date": "2025-03-03",
+      "topic": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
+      "source": "Hacker News",
+      "file_path": "content/posts/how-to-transform-your-esp32-into-a-dns-sinkhole-and-combat-doomscrolling.md"
     }
   ]
 }

@@ -1,35 +1,10 @@
 {
-  "timestamp": "2025-03-03T13:22:27.295637",
+  "timestamp": "2025-03-03T13:23:57.447595",
   "topics": [
-    {
-      "title": "Setting up a home NAS with Linux",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "SSH tips and tricks for remote management",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "API design note: Beware of adding an \"Other\" enum value",
-      "source": "Hacker News",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20250217-00/?p=110873"
-    },
-    {
-      "title": "Exploring xpipe: Your entire server infrastructure at your fingertips",
-      "source": "GitHub Trending",
-      "url": "https://github.com/xpipe-io/xpipe"
-    },
     {
       "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
       "source": "Hacker News",
       "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
-    },
-    {
-      "title": "Show HN: Prompting LLMs in Bash scripts",
-      "source": "Hacker News",
-      "url": "https://elijahpotter.dev/articles/prompting_large_language_models_in_bash_scripts"
     },
     {
       "title": "Docker Compose for local development",
@@ -37,19 +12,44 @@
       "url": null
     },
     {
-      "title": "Exploring windows: Windows inside a Docker container.",
+      "title": "Exploring shipfast: The best free SaaS base for GenAI, LLM, and other AI Services.  Ship your next Generative AI startups in days.",
       "source": "GitHub Trending",
-      "url": "https://github.com/dockur/windows"
+      "url": "https://github.com/vietanhdev/shipfast"
     },
     {
-      "title": "Gooey rubber that's slowly ruining old hard drives",
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
       "source": "Hacker News",
-      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
     },
     {
-      "title": "Setting up a VPN at home",
+      "title": "Setting up a home NAS with Linux",
       "source": "Curated Topic",
       "url": null
+    },
+    {
+      "title": "Automating backups for home servers",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Raspberry Pi Pico audio player",
+      "source": "Hacker News",
+      "url": "http://lucstechblog.blogspot.com/2025/02/raspberry-pi-pico-audio-player.html"
+    },
+    {
+      "title": "Migrating from Windows to Linux",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "The Pentium contains a complicated circuit to multiply by three",
+      "source": "Hacker News",
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
+    },
+    {
+      "title": "Exploring LLM-Engineers-Handbook: The LLM's practical guide: From the fundamentals to deploying advanced LLM and RAG apps to AWS using LLMOps best practices",
+      "source": "GitHub Trending",
+      "url": "https://github.com/PacktPublishing/LLM-Engineers-Handbook"
     }
   ]
 }

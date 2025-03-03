@@ -1,30 +1,35 @@
 {
-  "timestamp": "2025-03-03T14:15:34.794466",
+  "timestamp": "2025-03-03T14:20:23.917572",
   "topics": [
     {
-      "title": "We in-housed our data labelling",
-      "source": "Hacker News",
-      "url": "https://www.ericbutton.co/p/data-labelling"
+      "title": "Exploring linutil: Chris Titus Tech's Linux Toolbox - Linutil is a distro-agnostic toolbox designed to simplify everyday Linux tasks.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/ChrisTitusTech/linutil"
     },
     {
-      "title": "The Pentium contains a complicated circuit to multiply by three",
-      "source": "Hacker News",
-      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
+      "title": "Exploring ubicloud: Open source alternative to AWS. Elastic compute, block storage (non replicated), firewall and load balancer, managed Postgres, and IAM services in public beta.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/ubicloud/ubicloud"
     },
     {
-      "title": "Linux command line productivity tips",
+      "title": "Docker containers for beginners",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "I struggled with Git, so I'm making a game to spare others the pain",
-      "source": "Hacker News",
-      "url": "https://initialcommit.com/blog/im-making-a-git-game"
-    },
-    {
-      "title": "CI/CD pipelines for hobbyist projects",
+      "title": "Docker Compose for local development",
       "source": "Curated Topic",
       "url": null
+    },
+    {
+      "title": "Automating backups for home servers",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Hallucinations in code are the least dangerous form of LLM mistakes",
+      "source": "Hacker News",
+      "url": "https://simonwillison.net/2025/Mar/2/hallucinations-in-code/"
     },
     {
       "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
@@ -32,24 +37,14 @@
       "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
     },
     {
-      "title": "Exploring browser-use: Make websites accessible for AI agents",
-      "source": "GitHub Trending",
-      "url": "https://github.com/browser-use/browser-use"
+      "title": "Gooey rubber that's slowly ruining old hard drives",
+      "source": "Hacker News",
+      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
     },
     {
-      "title": "Migrating from Windows to Linux",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Home network security best practices",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Exploring open-interpreter: A natural language interface for computers",
-      "source": "GitHub Trending",
-      "url": "https://github.com/OpenInterpreter/open-interpreter"
+      "title": "The Pentium contains a complicated circuit to multiply by three",
+      "source": "Hacker News",
+      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
     }
   ]
 }

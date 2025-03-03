@@ -103,6 +103,14 @@
       "topic": "Exploring browser-use: Make websites accessible for AI agents",
       "source": "GitHub Trending",
       "file_path": "content/posts/making-websites-more-accessible-for-ai-agents-a-comprehensive-guide.md"
+    },
+    {
+      "title": "Understanding and Mitigating Hallucinations in Large Language Models (LLMs)",
+      "slug": "understanding-and-mitigating-hallucinations-in-large-language-models-llms",
+      "date": "2025-03-03",
+      "topic": "Hallucinations in code are the least dangerous form of LLM mistakes",
+      "source": "Hacker News",
+      "file_path": "content/posts/understanding-and-mitigating-hallucinations-in-large-language-models-llms.md"
     }
   ]
 }

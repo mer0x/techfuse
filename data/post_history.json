@@ -63,6 +63,14 @@
       "topic": "Setting up a reverse proxy with Nginx",
       "source": "Curated Topic",
       "file_path": "content/posts/how-to-set-up-a-reverse-proxy-with-nginx-a-step-by-step-guide.md"
+    },
+    {
+      "title": "Mastering SSH: Tips and Tricks for Efficient Remote Management",
+      "slug": "mastering-ssh-tips-and-tricks-for-efficient-remote-management",
+      "date": "2025-03-03",
+      "topic": "SSH tips and tricks for remote management",
+      "source": "Curated Topic",
+      "file_path": "content/posts/mastering-ssh-tips-and-tricks-for-efficient-remote-management.md"
     }
   ]
 }

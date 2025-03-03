@@ -1,40 +1,40 @@
 {
-  "timestamp": "2025-03-03T13:41:45.993097",
+  "timestamp": "2025-03-03T13:48:27.569471",
   "topics": [
     {
-      "title": "Alibaba Launches C930 RISC-V Chip Amid Shift from Western Tech",
-      "source": "Hacker News",
-      "url": "https://www.hpcwire.com/2025/02/28/alibaba-launches-c930-risc-v-chip-amid-shift-from-western-tech/"
-    },
-    {
-      "title": "Exploring azure-cost-cli: CLI tool to perform cost analysis on your Azure subscription",
-      "source": "GitHub Trending",
-      "url": "https://github.com/mivano/azure-cost-cli"
-    },
-    {
-      "title": "Setting up a reverse proxy with Nginx",
+      "title": "Windows power user tricks",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Building a home media server",
+      "title": "Geothermal power is a climate moon shot beneath our feet",
+      "source": "Hacker News",
+      "url": "https://www.newyorker.com/news/the-lede/geothermal-power-is-a-climate-moon-shot-beneath-our-feet"
+    },
+    {
+      "title": "Docker containers for beginners",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Gooey rubber that's slowly ruining old hard drives",
-      "source": "Hacker News",
-      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
-    },
-    {
-      "title": "We in-housed our data labelling",
-      "source": "Hacker News",
-      "url": "https://www.ericbutton.co/p/data-labelling"
-    },
-    {
-      "title": "Exploring GPT-RAG: Sharing the learning along the way we been gathering to enable Azure OpenAI at enterprise scale in a secure manner. GPT-RAG core is a Retrieval-Augmented Generation pattern running in Azure, using Azure Cognitive Search for retrieval and Azure OpenAI large language models to power ChatGPT-style and Q&A experiences.",
+      "title": "Exploring BPB-Worker-Panel: A GUI Panel providing Worker subscriptions for VLESS, Trojan and Warp configs alongside chain proxies, offering full DNS, clean IP,  Fragment, Warp, Warp pro and routing settings for cross-platform clients using Sing-box, Clash/Mihomo and Xray cores.",
       "source": "GitHub Trending",
-      "url": "https://github.com/Azure/GPT-RAG"
+      "url": "https://github.com/bia-pain-bache/BPB-Worker-Panel"
+    },
+    {
+      "title": "AWS Cat Qubits Make Quantum Error Correction Effective, Affordable",
+      "source": "Hacker News",
+      "url": "https://www.nextplatform.com/2025/02/27/aws-cat-qubits-make-quantum-error-correction-effective-affordable/"
+    },
+    {
+      "title": "Exploring BingGPT: Desktop application of new Bing's AI-powered chat (Windows, macOS and Linux)",
+      "source": "GitHub Trending",
+      "url": "https://github.com/dice2o/BingGPT"
+    },
+    {
+      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
+      "source": "Hacker News",
+      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
     },
     {
       "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
@@ -42,12 +42,12 @@
       "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
     },
     {
-      "title": "Self-hosting your own password manager",
+      "title": "Home network security best practices",
       "source": "Curated Topic",
       "url": null
     },
     {
-      "title": "Home network security best practices",
+      "title": "SSH tips and tricks for remote management",
       "source": "Curated Topic",
       "url": null
     }

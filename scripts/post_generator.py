@@ -116,6 +116,16 @@ class PostGenerator:
         
         return False
     
+    def _clean_tag(self, tag):
+        """Clean a tag from special characters and formatting"""
+        # Remove markdown formatting (**, *, __, _, etc.)
+        clean = re.sub(r'[\*\_\`\#\~\^\[\]\(\)\{\}\|\:\<\>]', '', tag)
+        # Remove any other special characters
+        clean = re.sub(r'[^\w\s-]', '', clean)
+        # Trim whitespace
+        clean = clean.strip()
+        return clean
+    
     def generate_post(self, topic):
         """Generate a blog post using GPT-4 Turbo"""
         source_info = f" (inspired by {topic['source']})" if topic.get('source') else ""
@@ -134,7 +144,7 @@ Write a comprehensive, clear, and concise technical tutorial or guide in English
 7. Use markdown formatting throughout
 
 The content should be informative but not overly long (800-1200 words). It should be helpful for both beginners and more technical users.
-Include 2-5 relevant tags that describe the post's content.
+Include 2-5 relevant tags that describe the post's content. Write them as a simple comma-separated list without any formatting like bold (**) or italics (*).
 
 Reference URL (if you need inspiration, but don't cite directly): {reference_url}
 """
@@ -190,11 +200,11 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
                 # Remove the tags line from content
                 content = re.sub(r'Tags:?\s*.+?$', '', content, flags=re.MULTILINE | re.IGNORECASE)
                 
-                # Parse tags
+                # Parse tags and clean them
                 if ',' in tags_str:
-                    tags = [tag.strip() for tag in tags_str.split(',')]
+                    tags = [self._clean_tag(tag) for tag in tags_str.split(',') if self._clean_tag(tag)]
                 elif ' ' in tags_str:
-                    tags = [tag.strip() for tag in tags_str.split()]
+                    tags = [self._clean_tag(tag) for tag in tags_str.split() if self._clean_tag(tag)]
             
             # If no tags were found, generate some
             if not tags:
@@ -244,7 +254,7 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
             frontmatter = {
                 'title': title,
                 'date': date,
-                'tags': tags,
+                'tags': [tag.strip() for tag in tags if tag.strip()],  # Ensure clean tags
                 'description': f"A guide on {post_data['topic']}",
                 'author': "Auto Blog Generator",
                 'showToc': True,

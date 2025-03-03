@@ -55,6 +55,14 @@
       "topic": "I struggled with Git, so I'm making a game to spare others the pain",
       "source": "Hacker News",
       "file_path": "content/posts/learning-git-through-gaming-a-revolutionary-approach-to-mastering-version-control.md"
+    },
+    {
+      "title": "How to Set Up a Reverse Proxy with Nginx: A Step-by-Step Guide",
+      "slug": "how-to-set-up-a-reverse-proxy-with-nginx-a-step-by-step-guide",
+      "date": "2025-03-03",
+      "topic": "Setting up a reverse proxy with Nginx",
+      "source": "Curated Topic",
+      "file_path": "content/posts/how-to-set-up-a-reverse-proxy-with-nginx-a-step-by-step-guide.md"
     }
   ]
 }

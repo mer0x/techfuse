@@ -1,45 +1,15 @@
 {
-  "timestamp": "2025-03-03T13:37:45.861845",
+  "timestamp": "2025-03-03T13:41:45.993097",
   "topics": [
     {
-      "title": "Migrating from Windows to Linux",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "I struggled with Git, so I'm making a game to spare others the pain",
+      "title": "Alibaba Launches C930 RISC-V Chip Amid Shift from Western Tech",
       "source": "Hacker News",
-      "url": "https://initialcommit.com/blog/im-making-a-git-game"
+      "url": "https://www.hpcwire.com/2025/02/28/alibaba-launches-c930-risc-v-chip-amid-shift-from-western-tech/"
     },
     {
-      "title": "Docker Compose for local development",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "Exploring browser-use: Make websites accessible for AI agents",
+      "title": "Exploring azure-cost-cli: CLI tool to perform cost analysis on your Azure subscription",
       "source": "GitHub Trending",
-      "url": "https://github.com/browser-use/browser-use"
-    },
-    {
-      "title": "Man's brain turned to glass by hot Vesuvius ash cloud",
-      "source": "Hacker News",
-      "url": "https://www.bbc.com/news/articles/cgr2n8xx5gyo"
-    },
-    {
-      "title": "Exploring DocsGPT: Chatbot for documentation, that allows you to chat with your data. Privately deployable, provides AI knowledge sharing and integrates knowledge into your AI workflow",
-      "source": "GitHub Trending",
-      "url": "https://github.com/arc53/DocsGPT"
-    },
-    {
-      "title": "SSH tips and tricks for remote management",
-      "source": "Curated Topic",
-      "url": null
-    },
-    {
-      "title": "The Pentium contains a complicated circuit to multiply by three",
-      "source": "Hacker News",
-      "url": "https://www.righto.com/2025/03/pentium-multiplier-adder-reverse-engineered.html"
+      "url": "https://github.com/mivano/azure-cost-cli"
     },
     {
       "title": "Setting up a reverse proxy with Nginx",
@@ -47,9 +17,39 @@
       "url": null
     },
     {
+      "title": "Building a home media server",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Gooey rubber that's slowly ruining old hard drives",
+      "source": "Hacker News",
+      "url": "https://www.downtowndougbrown.com/2025/03/the-gooey-rubber-thats-slowly-ruining-old-hard-drives/"
+    },
+    {
       "title": "We in-housed our data labelling",
       "source": "Hacker News",
       "url": "https://www.ericbutton.co/p/data-labelling"
+    },
+    {
+      "title": "Exploring GPT-RAG: Sharing the learning along the way we been gathering to enable Azure OpenAI at enterprise scale in a secure manner. GPT-RAG core is a Retrieval-Augmented Generation pattern running in Azure, using Azure Cognitive Search for retrieval and Azure OpenAI large language models to power ChatGPT-style and Q&A experiences.",
+      "source": "GitHub Trending",
+      "url": "https://github.com/Azure/GPT-RAG"
+    },
+    {
+      "title": "Turning my ESP32 into a DNS sinkhole to fight doomscrolling",
+      "source": "Hacker News",
+      "url": "https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole"
+    },
+    {
+      "title": "Self-hosting your own password manager",
+      "source": "Curated Topic",
+      "url": null
+    },
+    {
+      "title": "Home network security best practices",
+      "source": "Curated Topic",
+      "url": null
     }
   ]
 }

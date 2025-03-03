@@ -266,7 +266,11 @@ Reference URL (if you need inspiration, but don't cite directly): {reference_url
             
             # Convert frontmatter to YAML
             frontmatter_yaml = yaml.dump(frontmatter, default_flow_style=False)
-            
+
+            # Remove the first heading (title) from the content since it's already in the frontmatter
+            content = re.sub(r'^#\s+.+$', '', content, count=1, flags=re.MULTILINE)
+            content = content.strip()
+
             # Create the complete post content
             full_content = f"---\n{frontmatter_yaml}---\n\n{content}"
             

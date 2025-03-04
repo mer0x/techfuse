@@ -175,6 +175,14 @@
       "topic": "CI/CD pipelines for hobbyist projects",
       "source": "Curated Topic",
       "file_path": "content/posts/how-to-set-up-a-simple-cicd-pipeline-for-your-hobbyist-project.md"
+    },
+    {
+      "title": "Exploring ubuntu-rockchip: Ubuntu for Rockchip RK35XX Devices",
+      "slug": "exploring-ubuntu-rockchip-ubuntu-for-rockchip-rk35xx-devices",
+      "date": "2025-03-04",
+      "topic": "Exploring ubuntu-rockchip: Ubuntu for Rockchip RK35XX Devices",
+      "source": "GitHub Trending",
+      "file_path": "content/posts/exploring-ubuntu-rockchip-ubuntu-for-rockchip-rk35xx-devices.md"
     }
   ]
 }
